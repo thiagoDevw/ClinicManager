@@ -2,7 +2,7 @@
 using SendGrid;
 using SendGrid.Helpers.Mail;
 
-namespace ClinicManager.Application.Services
+namespace ClinicManager.Application.Services.ServicesEmail
 {
     internal class SendGridEmailService
     {

@@ -145,3 +145,9 @@ S:\Clinic Manager\ClinicManager\ClinicManager.Api\obj\Debug\net8.0\refint\Clinic
 S:\Clinic Manager\ClinicManager\ClinicManager.Api\obj\Debug\net8.0\ClinicManager.Api.pdb
 S:\Clinic Manager\ClinicManager\ClinicManager.Api\obj\Debug\net8.0\ClinicManager.Api.genruntimeconfig.cache
 S:\Clinic Manager\ClinicManager\ClinicManager.Api\obj\Debug\net8.0\ref\ClinicManager.Api.dll
+S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\Google.Apis.dll
+S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\Google.Apis.Auth.dll
+S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\Google.Apis.Calendar.v3.dll
+S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\Google.Apis.Core.dll
+S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\System.Management.dll
+S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll

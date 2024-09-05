@@ -1,6 +1,6 @@
-﻿using ClinicManager.Application.Services;
-using ClinicManager.Application.Services.ServicesCustomer;
+﻿using ClinicManager.Application.Services.ServicesCustomer;
 using ClinicManager.Application.Services.ServicesDoctor;
+using ClinicManager.Application.Services.ServicesEmail;
 using ClinicManager.Application.Services.ServicesPatient;
 using ClinicManager.Application.Services.ServicesService;
 using Microsoft.Extensions.Configuration;

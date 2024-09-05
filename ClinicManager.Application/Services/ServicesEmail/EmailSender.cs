@@ -3,7 +3,7 @@ using SendGrid;
 using SendGrid.Helpers.Mail;
 using System.Threading.Tasks;
 
-namespace ClinicManager.Application.Services
+namespace ClinicManager.Application.Services.ServicesEmail
 {
     public class EmailSender : IEmailSender
     {

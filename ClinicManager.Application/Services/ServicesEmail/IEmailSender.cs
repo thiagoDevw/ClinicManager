@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicManager.Application.Services
+namespace ClinicManager.Application.Services.ServicesEmail
 {
     public interface IEmailSender
     {
