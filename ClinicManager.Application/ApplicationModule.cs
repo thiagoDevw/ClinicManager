@@ -12,15 +12,15 @@ namespace ClinicManager.Application
 {
     public static class ApplicationModule
     {
-        public static IServiceCollection AddApplication(this IServiceCollection services)
+        public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
         {
             services
-                .AddServices();
+                .AddServices(configuration);
 
             return services;
         }
 
-        private static IServiceCollection AddServices(this IServiceCollection services)
+        private static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<ICustomerService, CustomerServiceManager>();
             services.AddScoped<IDoctorService, DoctorService>();
@@ -29,7 +29,6 @@ namespace ClinicManager.Application
 
             services.AddSingleton<IEmailSender>(provider =>
             {
-                var configuration = provider.GetRequiredService<IConfiguration>();
                 var apiKey = configuration["SendGrid:Apikey"];
                 var sendGridClient = new SendGridClient(apiKey);
                 return new EmailSender(sendGridClient);

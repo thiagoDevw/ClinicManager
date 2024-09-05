@@ -10,9 +10,11 @@ namespace ClinicManager.Application.Services.ServicesCustomer
     public class CustomerServiceManager : ICustomerService
     {
         private readonly ClinicDbContext _context;
-        public CustomerServiceManager(ClinicDbContext context)
+        private readonly IEmailSender _emailSender;
+        public CustomerServiceManager(ClinicDbContext context, IEmailSender emailSender)
         {
             _context = context;
+            _emailSender = emailSender;
         }
 
         public ResultViewModel DeleteById(int id)
@@ -102,21 +104,54 @@ namespace ClinicManager.Application.Services.ServicesCustomer
 
         public ResultViewModel<int> Insert(CreateCustomerInputModel model)
         {
-            var customerService = new CustomerService
+            try
             {
-                PatientId = model.PatientId,
-                DoctorId = model.DoctorId,
-                ServiceId = model.ServiceId,
-                Agreement = model.Agreement,
-                Start = model.Start,
-                End = model.End,
-                TypeService = model.TypeService
-            };
+                var customerService = new CustomerService
+                {
+                    PatientId = model.PatientId,
+                    DoctorId = model.DoctorId,
+                    ServiceId = model.ServiceId,
+                    Agreement = model.Agreement,
+                    Start = model.Start,
+                    End = model.End,
+                    TypeService = model.TypeService
+                };
 
-            _context.CustomerServices.Add(customerService);
-            _context.SaveChanges();
+                _context.CustomerServices.Add(customerService);
+                _context.SaveChanges();
 
-            return ResultViewModel<int>.Success(customerService.Id);
+                // Buscar o paciente pelo PatientId
+                var patient = _context.Patients.FirstOrDefault(p => p.Id == model.PatientId);
+
+                if (patient == null)
+                {
+                    return ResultViewModel<int>.Error("Paciente não encontrado.");
+                }
+
+                // Obter o email do paciente
+                string toEmail = patient.Email;
+
+                // Definir assunto e mensagem de email
+                string subject = "Novo atendimento criado";
+                string message = $"Olá {patient.Name}, seu novo atendimento foi criado com sucesso para o dia {customerService.Start}.";
+
+                // Enviar o email
+                try
+                {
+                    _emailSender.SendEmailAsync(toEmail, subject, message);
+                }
+                catch (Exception ex)
+                {
+                    return ResultViewModel<int>.Error($"Atendimento criado, mas houve um erro ao enviar o email: {ex.Message}");
+                }
+
+
+                return ResultViewModel<int>.Success(customerService.Id);
+            }
+            catch (Exception ex)
+            {
+                return ResultViewModel<int>.Error($"Erro ao criar o atendimento: {ex.Message}");
+            }
         }
 
         public ResultViewModel Update(UpdateCustomerInputModel model)
