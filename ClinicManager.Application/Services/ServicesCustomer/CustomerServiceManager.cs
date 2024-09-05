@@ -117,8 +117,6 @@ namespace ClinicManager.Application.Services.ServicesCustomer
                     TypeService = model.TypeService
                 };
 
-                _context.CustomerServices.Add(customerService);
-                _context.SaveChanges();
 
                 // Buscar o paciente pelo PatientId
                 var patient = _context.Patients.FirstOrDefault(p => p.Id == model.PatientId);
@@ -136,15 +134,15 @@ namespace ClinicManager.Application.Services.ServicesCustomer
                 string message = $"Olá {patient.Name}, seu novo atendimento foi criado com sucesso para o dia {customerService.Start}.";
 
                 // Enviar o email
-                try
-                {
-                    _emailSender.SendEmailAsync(toEmail, subject, message);
-                }
-                catch (Exception ex)
-                {
-                    return ResultViewModel<int>.Error($"Atendimento criado, mas houve um erro ao enviar o email: {ex.Message}");
-                }
+                var emailResult = _emailSender.SendEmail(toEmail, subject, message);
 
+                if (!emailResult.IsSucess)
+                {
+                    Console.WriteLine($"Erro ao enviar email: {emailResult.Message}");
+                    return ResultViewModel<int>.Error($"Atendimento criado, mas houve um erro ao enviar o email: {emailResult.Message}");
+                }
+                _context.CustomerServices.Add(customerService);
+                _context.SaveChanges();
 
                 return ResultViewModel<int>.Success(customerService.Id);
             }
@@ -152,6 +150,8 @@ namespace ClinicManager.Application.Services.ServicesCustomer
             {
                 return ResultViewModel<int>.Error($"Erro ao criar o atendimento: {ex.Message}");
             }
+
+            
         }
 
         public ResultViewModel Update(UpdateCustomerInputModel model)

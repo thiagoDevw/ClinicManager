@@ -601,6 +601,9 @@
         }
       },
       "ClinicManager.Core/1.0.0": {
+        "dependencies": {
+          "SendGrid": "9.29.3"
+        },
         "runtime": {
           "ClinicManager.Core.dll": {}
         }
@@ -609,7 +612,8 @@
         "dependencies": {
           "ClinicManager.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "8.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
+          "SendGrid": "9.29.3"
         },
         "runtime": {
           "ClinicManager.Infrastructure.dll": {}

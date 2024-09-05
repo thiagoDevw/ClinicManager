@@ -29,6 +29,7 @@ namespace ClinicManager.Application
 
             services.AddSingleton<IEmailSender>(provider =>
             {
+                var configuration = provider.GetRequiredService<IConfiguration>();
                 var apiKey = configuration["SendGrid:Apikey"];
                 var sendGridClient = new SendGridClient(apiKey);
                 return new EmailSender(sendGridClient);

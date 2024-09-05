@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicManager.Application.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace ClinicManager.Application.Services
 {
     public interface IEmailSender
     {
-        Task SendEmailAsync(string toEmail, string subject, string body);
+        ResultViewModel SendEmail(string toEmail, string subject, string body);
     }
 }

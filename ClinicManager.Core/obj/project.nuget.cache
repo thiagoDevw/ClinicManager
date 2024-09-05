@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Z+zUcVgQJZcVX7uYuqgOFPv3nUkPoRBRDUxaJ6Y36zQ6iNRCOC6Qbc/+ZnsKf0UgHIjCSnVRsQFWeQ+RkLD5ug==",
+  "dgSpecHash": "k7+8mbzj0CSvy3UNLTF7VqjCO9hgUfgmJOUNaT42FVBi/NJFO5KTzwodk0bGn9EWG0i3XyWosGFWpkb7U8B3SA==",
   "success": true,
   "projectFilePath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ta741\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\ta741\\.nuget\\packages\\sendgrid\\9.29.3\\sendgrid.9.29.3.nupkg.sha512",
+    "C:\\Users\\ta741\\.nuget\\packages\\starkbank-ecdsa\\1.3.3\\starkbank-ecdsa.1.3.3.nupkg.sha512"
+  ],
   "logs": []
 }

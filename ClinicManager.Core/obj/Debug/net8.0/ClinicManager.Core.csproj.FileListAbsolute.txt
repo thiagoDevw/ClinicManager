@@ -10,3 +10,4 @@ S:\Clinic Manager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManage
 S:\Clinic Manager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\refint\ClinicManager.Core.dll
 S:\Clinic Manager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManager.Core.pdb
 S:\Clinic Manager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ref\ClinicManager.Core.dll
+S:\Clinic Manager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManager.Core.csproj.AssemblyReference.cache

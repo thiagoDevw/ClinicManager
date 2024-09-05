@@ -127,6 +127,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -210,6 +216,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.3, )"
             }
           },
           "imports": [
