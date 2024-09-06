@@ -138,6 +138,15 @@ namespace ClinicManager.Application.Services.ServicesCustomer
                 string subject = "Novo atendimento criado";
                 string message = $"Olá {patient.Name}, seu novo atendimento foi criado com sucesso para o dia {customerService.Start}.";
 
+                // Criar o link do Google Calendar
+                string startDate = customerService.Start.ToString("yyyyMMddTHHmmss");
+                string endDate = customerService.End.ToString("yyyyMMddTHHmmss");
+
+                string googleCalendarUrl = $"https://www.google.com/calendar/render?action=TEMPLATE&text=Consulta+com+{patient.Name}&dates={startDate}/{endDate}&details=Consulta+com+o+Dr.+{model.DoctorId}&location=Clinica&ctz=America/Sao_Paulo&sf=true&output=xml";
+
+                // Adicionar o link do Google Calendar ao email
+                message += $"\n\nClique aqui para adicionar ao Google Calendar: <a href='{googleCalendarUrl}'>Adicionar ao Google Calendar</a>";
+
                 // Enviar o email
                 var emailResult = _emailSender.SendEmail(toEmail, subject, message);
 
@@ -145,16 +154,6 @@ namespace ClinicManager.Application.Services.ServicesCustomer
                 {
                     Console.WriteLine($"Erro ao enviar email: {emailResult.Message}");
                     return ResultViewModel<int>.Error($"Atendimento criado, mas houve um erro ao enviar o email: {emailResult.Message}");
-                }
-
-                // Criação de evento no Google Calendar
-                try
-                {
-                    _googleCalendarService.CreateEvent(patient.Name, customerService.Start, customerService.End);
-                }
-                catch (Exception ex) 
-                {
-                    Console.WriteLine($"Erro ao criar o evento no Google Calendar: {ex.Message}");
                 }
 
                 _context.SaveChanges();
