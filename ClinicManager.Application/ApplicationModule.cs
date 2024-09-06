@@ -1,4 +1,5 @@
-﻿using ClinicManager.Application.Services.ServicesCustomer;
+﻿using ClinicManager.Application.Services;
+using ClinicManager.Application.Services.ServicesCustomer;
 using ClinicManager.Application.Services.ServicesDoctor;
 using ClinicManager.Application.Services.ServicesEmail;
 using ClinicManager.Application.Services.ServicesPatient;
@@ -27,12 +28,20 @@ namespace ClinicManager.Application
             services.AddScoped<IPatientService, PatientService>();
             services.AddScoped<IService, ServiceManager>();
 
+            // Configuração do Email com SendGrid
             services.AddSingleton<IEmailSender>(provider =>
             {
                 var configuration = provider.GetRequiredService<IConfiguration>();
                 var apiKey = configuration["SendGrid:Apikey"];
                 var sendGridClient = new SendGridClient(apiKey);
                 return new EmailSender(sendGridClient);
+            });
+
+            // Configuração do Google Calendar Service
+            services.AddScoped<GoogleCalendarService>(provider =>
+            {
+                var config = provider.GetRequiredService<IConfiguration>();
+                return new GoogleCalendarService(config);
             });
 
             return services;

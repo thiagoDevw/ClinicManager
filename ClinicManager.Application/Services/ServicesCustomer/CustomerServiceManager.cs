@@ -12,10 +12,12 @@ namespace ClinicManager.Application.Services.ServicesCustomer
     {
         private readonly ClinicDbContext _context;
         private readonly IEmailSender _emailSender;
-        public CustomerServiceManager(ClinicDbContext context, IEmailSender emailSender)
+        private readonly GoogleCalendarService _googleCalendarService;
+        public CustomerServiceManager(ClinicDbContext context, IEmailSender emailSender, GoogleCalendarService googleCalendarService)
         {
             _context = context;
             _emailSender = emailSender;
+            _googleCalendarService = googleCalendarService;
         }
 
         public ResultViewModel DeleteById(int id)
@@ -143,6 +145,16 @@ namespace ClinicManager.Application.Services.ServicesCustomer
                 {
                     Console.WriteLine($"Erro ao enviar email: {emailResult.Message}");
                     return ResultViewModel<int>.Error($"Atendimento criado, mas houve um erro ao enviar o email: {emailResult.Message}");
+                }
+
+                // Criação de evento no Google Calendar
+                try
+                {
+                    _googleCalendarService.CreateEvent(patient.Name, customerService.Start, customerService.End);
+                }
+                catch (Exception ex) 
+                {
+                    Console.WriteLine($"Erro ao criar o evento no Google Calendar: {ex.Message}");
                 }
 
                 _context.SaveChanges();
