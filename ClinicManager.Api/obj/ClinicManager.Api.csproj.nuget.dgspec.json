@@ -175,6 +175,10 @@
               "target": "Package",
               "version": "[1.68.0.3473, )"
             },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "SendGrid": {
               "target": "Package",
               "version": "[9.29.3, )"
