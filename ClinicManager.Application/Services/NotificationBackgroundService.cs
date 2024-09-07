@@ -10,13 +10,11 @@ namespace ClinicManager.Application.Services
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly IEmailSender _emailSender;
-        private readonly ClinicDbContext _dbContext;
 
-        public NotificationBackgroundService(IServiceProvider serviceProvider, IEmailSender emailSender, ClinicDbContext dbContext)
+        public NotificationBackgroundService(IServiceProvider serviceProvider, IEmailSender emailSender)
         {
             _serviceProvider = serviceProvider;
             _emailSender = emailSender;
-            _dbContext = dbContext;
         }
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
@@ -29,7 +27,7 @@ namespace ClinicManager.Application.Services
             while (!stoppingToken.IsCancellationRequested)
             {
                 // Rodar a cada 24 horas
-                Thread.Sleep(TimeSpan.FromHours(24));
+                Thread.Sleep(TimeSpan.FromHours(1));
 
                 // Executar a lógica de notificação
                 NotifyPatients();
@@ -44,10 +42,10 @@ namespace ClinicManager.Application.Services
                 var emailSender = scope.ServiceProvider.GetRequiredService<IEmailSender>();
 
                 // Buscar os atendimentos do dia seguinte
-                var tomorrow = DateTime.Today.AddDays(1);
-                var appointments = _dbContext.CustomerServices
+                var targetTime = DateTime.Now.AddMinutes(2);
+                var appointments = dbContext.CustomerServices
                     .Include(c => c.Patient)
-                    .Where(c => c.Start.Date == tomorrow)
+                    .Where(c => c.Start >= DateTime.Now && c.Start <= targetTime)
                     .ToList();
                 
                 foreach (var appointment in appointments)
@@ -61,7 +59,7 @@ namespace ClinicManager.Application.Services
 
                     if (!emailResult.IsSucess)
                     {
-                        Console.WriteLine($"Erro ao enviar");
+                        Console.WriteLine($"Erro ao enviar email: {emailResult.Message}");
                     }
                 }
             }

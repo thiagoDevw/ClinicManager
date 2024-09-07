@@ -1,4 +1,5 @@
-﻿using ClinicManager.Application.Services.ServicesCalendar;
+﻿using ClinicManager.Application.Services;
+using ClinicManager.Application.Services.ServicesCalendar;
 using ClinicManager.Application.Services.ServicesCustomer;
 using ClinicManager.Application.Services.ServicesDoctor;
 using ClinicManager.Application.Services.ServicesEmail;
@@ -27,6 +28,7 @@ namespace ClinicManager.Application
             services.AddScoped<IDoctorService, DoctorService>();
             services.AddScoped<IPatientService, PatientService>();
             services.AddScoped<IService, ServiceManager>();
+            services.AddHostedService<NotificationBackgroundService>();
 
             // Configuração do Email com SendGrid
             services.AddSingleton<IEmailSender>(provider =>
