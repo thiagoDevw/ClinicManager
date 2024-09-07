@@ -10,30 +10,33 @@ namespace ClinicManager.Application.Services
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly IEmailSender _emailSender;
+        private readonly ClinicDbContext _dbContext;
 
-        public NotificationBackgroundService(IServiceProvider serviceProvider, IEmailSender emailSender)
+        public NotificationBackgroundService(IServiceProvider serviceProvider, IEmailSender emailSender, ClinicDbContext dbContext)
         {
             _serviceProvider = serviceProvider;
             _emailSender = emailSender;
+            _dbContext = dbContext;
         }
 
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        protected override Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            return Task.Run(() => BackgroundProcessing(stoppingToken), stoppingToken);
+        }
+
+        private void BackgroundProcessing(CancellationToken stoppingToken)
         {
             while (!stoppingToken.IsCancellationRequested)
             {
                 // Rodar a cada 24 horas
-                await Task.Delay(TimeSpan.FromHours(24), stoppingToken);
+                Thread.Sleep(TimeSpan.FromHours(24));
 
                 // Executar a lógica de notificação
-                await NotifyPatientsAsync();
+                NotifyPatients();
             }
-
-            throw new NotImplementedException();
-
-            
         }
 
-        private async Task NotifyPatientsAsync()
+        private void NotifyPatients()
         {
             using (var scope = _serviceProvider.CreateScope())
             {
@@ -42,11 +45,25 @@ namespace ClinicManager.Application.Services
 
                 // Buscar os atendimentos do dia seguinte
                 var tomorrow = DateTime.Today.AddDays(1);
-                /*var appointments = dbContext.CustomerServices
+                var appointments = _dbContext.CustomerServices
                     .Include(c => c.Patient)
                     .Where(c => c.Start.Date == tomorrow)
                     .ToList();
-                */
+                
+                foreach (var appointment in appointments)
+                {
+                    var patient = appointment.Patient;
+                    var subject = "Lembrete da consulta";
+                    var message = $"Olá {patient.Name}, este é um lembrete de sua consulta marcada para {appointment.Start}.";
+
+                    // Enviar o email de notificação
+                    var emailResult = emailSender.SendEmail(patient.Email, subject, message);
+
+                    if (!emailResult.IsSucess)
+                    {
+                        Console.WriteLine($"Erro ao enviar");
+                    }
+                }
             }
         }
     }
