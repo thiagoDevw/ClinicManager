@@ -193,8 +193,7 @@
               "RelativeToolTip": "ClinicManager.Application\\ApplicationModule.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAC8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T22:01:32.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T22:01:32.782Z"
             },
             {
               "$type": "Document",
@@ -218,8 +217,7 @@
               "RelativeToolTip": "ClinicManager.Api\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T20:40:38.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T20:40:38.595Z"
             },
             {
               "$type": "Document",
@@ -229,7 +227,7 @@
               "RelativeDocumentMoniker": "ClinicManager.Application\\Services\\NotificationBackgroundService.cs",
               "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Services\\NotificationBackgroundService.cs",
               "RelativeToolTip": "ClinicManager.Application\\Services\\NotificationBackgroundService.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwDcAAAAAAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwDUAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-06T21:46:25.615Z",
               "EditorCaption": ""
