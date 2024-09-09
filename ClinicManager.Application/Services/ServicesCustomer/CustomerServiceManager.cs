@@ -106,7 +106,7 @@ namespace ClinicManager.Application.Services.ServicesCustomer
             return ResultViewModel<CustomerViewModel>.Success(customer);
         }
 
-        public ResultViewModel<int> Insert(CreateCustomerInputModel model)
+        public async Task<ResultViewModel<int>> Insert(CreateCustomerInputModel model)
         {
             try
             {
@@ -122,7 +122,7 @@ namespace ClinicManager.Application.Services.ServicesCustomer
                 };
 
                 _context.CustomerServices.Add(customerService);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
 
                 // Buscar o paciente pelo PatientId
                 var patient = _context.Patients.FirstOrDefault(p => p.Id == model.PatientId);
@@ -149,7 +149,7 @@ namespace ClinicManager.Application.Services.ServicesCustomer
                 message += $"\n\nClique aqui para adicionar ao Google Calendar: <a href='{googleCalendarUrl}'>Adicionar ao Google Calendar</a>";
 
                 // Enviar o email
-                var emailResult = _emailSender.SendEmail(toEmail, subject, message);
+                var emailResult = await _emailSender.SendEmailAsync(toEmail, subject, message);
 
                 if (!emailResult.IsSucess)
                 {

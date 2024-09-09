@@ -8,7 +8,7 @@ namespace ClinicManager.Application.Services.ServicesCustomer
     {
         ResultViewModel<List<CustomerItemViewModel>> GetAll(string search = ""/*, int page = 1, int pageSize = 3*/);
         ResultViewModel<CustomerViewModel> GetById(int id);
-        ResultViewModel<int> Insert(CreateCustomerInputModel model);
+        Task<ResultViewModel<int>> Insert(CreateCustomerInputModel model);
         ResultViewModel Update(UpdateCustomerInputModel model);
         ResultViewModel DeleteById(int id);
     }

@@ -17,12 +17,7 @@ namespace ClinicManager.Application.Services
             _emailSender = emailSender;
         }
 
-        protected override Task ExecuteAsync(CancellationToken stoppingToken)
-        {
-            return Task.Run(() => BackgroundProcessing(stoppingToken), stoppingToken);
-        }
-
-        private void BackgroundProcessing(CancellationToken stoppingToken)
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             Console.WriteLine("Serviço de background iniciado...");
 
@@ -31,14 +26,14 @@ namespace ClinicManager.Application.Services
                 Console.WriteLine("Executando o serviço de Background...");
 
                 // Rodar a cada 24 horas
-                Thread.Sleep(TimeSpan.FromMinutes(5));
+                await Task.Delay(TimeSpan.FromMinutes(5), stoppingToken);
 
                 // Executar a lógica de notificação
-                NotifyPatients();
+                await NotifyPatientsAsync(stoppingToken);
             }
         }
 
-        private void NotifyPatients()
+        private async Task NotifyPatientsAsync(CancellationToken stoppingToken)
         {
             Console.WriteLine("Notificando paciente");
 
@@ -48,25 +43,32 @@ namespace ClinicManager.Application.Services
                 var emailSender = scope.ServiceProvider.GetRequiredService<IEmailSender>();
 
                 // Buscar os atendimentos do dia seguinte
+                
+                var targetTime = DateTime.Now.AddMinutes(5);
                 var now = DateTime.Now;
-                var targetTime = now.AddMinutes(5);
 
                 var appointments = dbContext.CustomerServices
                     .Include(c => c.Patient)
-                    .Where(c => c.Start >= DateTime.Now && c.Start <= targetTime)
+                    .Where(c => c.Start >= now && c.Start <= targetTime)
                     .ToList();
 
                 Console.WriteLine($"Número de atendimentos encontrados: {appointments.Count}");
 
                 foreach (var appointment in appointments)
                 {
+                    if (stoppingToken.IsCancellationRequested)
+                    {
+                        Console.WriteLine("Serviço de background cancelado.");
+                        return;
+                    }
+
                     var patient = appointment.Patient;
                     Console.WriteLine($"Notificando paciente: {patient.Name}");
                     var subject = "Lembrete da consulta";
                     var message = $"Olá {patient.Name}, este é um lembrete de sua consulta marcada para {appointment.Start}.";
 
                     // Enviar o email de notificação
-                    var emailResult = emailSender.SendEmail(patient.Email, subject, message);
+                    var emailResult = await emailSender.SendEmailAsync(patient.Email, subject, message);
 
                     if (!emailResult.IsSucess)
                     {

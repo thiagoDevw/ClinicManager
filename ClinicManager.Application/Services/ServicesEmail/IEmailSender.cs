@@ -9,6 +9,6 @@ namespace ClinicManager.Application.Services.ServicesEmail
 {
     public interface IEmailSender
     {
-        ResultViewModel SendEmail(string toEmail, string subject, string body);
+        Task<ResultViewModel> SendEmailAsync(string toEmail, string subject, string body);
     }
 }

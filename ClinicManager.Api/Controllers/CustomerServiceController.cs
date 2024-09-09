@@ -40,9 +40,9 @@ namespace ClinicManager.Api.Controllers
 
         // POST api/customerService
         [HttpPost]
-        public IActionResult PostCustomer(CreateCustomerInputModel model)
+        public async Task<IActionResult> PostCustomer(CreateCustomerInputModel model)
         {
-            var result = _service.Insert(model);
+            var result = await _service.Insert(model);
 
 
             return CreatedAtAction(nameof(GetById), new { id = result.Data }, model);

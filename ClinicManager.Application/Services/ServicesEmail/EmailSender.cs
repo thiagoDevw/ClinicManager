@@ -14,7 +14,8 @@ namespace ClinicManager.Application.Services.ServicesEmail
             _sendGridClient = sendGridClient;
         }
 
-        public ResultViewModel SendEmail(string toEmail, string subject, string body)
+
+        public async Task<ResultViewModel> SendEmailAsync(string toEmail, string subject, string body)
         {
             try
             {
@@ -22,7 +23,7 @@ namespace ClinicManager.Application.Services.ServicesEmail
                 var to = new EmailAddress(toEmail);
                 var msg = MailHelper.CreateSingleEmail(from, to, subject, body, body);
 
-                var response = _sendGridClient.SendEmailAsync(msg).Result;
+                var response = await _sendGridClient.SendEmailAsync(msg);
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
