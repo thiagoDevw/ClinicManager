@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "91HoJHpgim4+K0vIq0CPKyeaoxsTRFRBQglBZH3spAVgivL0f2dyuS05BKx8GGDqXFf1AgXCCcmkVGVD2vwcnw==",
+  "dgSpecHash": "5Fb8QMAjPSwqml7exBhw9uPGD7PjhUzbkddcKK8deLorMzZhpECThbYcqsDvW4tKGU+7rbn9wakJuluXp4OeJg==",
   "success": true,
   "projectFilePath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\ClinicManager.Application.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,11 @@
     "C:\\Users\\ta741\\.nuget\\packages\\google.apis.auth\\1.68.0\\google.apis.auth.1.68.0.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\google.apis.calendar.v3\\1.68.0.3473\\google.apis.calendar.v3.1.68.0.3473.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\google.apis.core\\1.68.0\\google.apis.core.1.68.0.nupkg.sha512",
+    "C:\\Users\\ta741\\.nuget\\packages\\hangfire\\1.8.14\\hangfire.1.8.14.nupkg.sha512",
+    "C:\\Users\\ta741\\.nuget\\packages\\hangfire.aspnetcore\\1.8.14\\hangfire.aspnetcore.1.8.14.nupkg.sha512",
+    "C:\\Users\\ta741\\.nuget\\packages\\hangfire.core\\1.8.14\\hangfire.core.1.8.14.nupkg.sha512",
+    "C:\\Users\\ta741\\.nuget\\packages\\hangfire.netcore\\1.8.14\\hangfire.netcore.1.8.14.nupkg.sha512",
+    "C:\\Users\\ta741\\.nuget\\packages\\hangfire.sqlserver\\1.8.14\\hangfire.sqlserver.1.8.14.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",

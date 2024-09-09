@@ -1,9 +1,9 @@
-
 using ClinicManager.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using ClinicManager.Application;
+using Hangfire;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +13,18 @@ builder.Services.AddControllers();
     
 
 //builder.Services.AddDbContext<ClinicDbContext>(o => o.UseInMemoryDatabase("ClinicManagerDb"));
-var connectionString = builder.Configuration.GetConnectionString("ClinicManagerCs");
+var connectionString = 
+    builder.Configuration.GetConnectionString("ClinicManagerCs");
+
+var connectionStringHangfire = 
+    builder.Configuration.GetConnectionString("HangfireConnection");
+
+builder.Services.AddHangfire((sp, config) =>
+{
+    config.UseSqlServerStorage(connectionStringHangfire);
+});
+
+builder.Services.AddHangfireServer();
 
 builder.Services.AddDbContext<ClinicDbContext>(o => o.UseSqlServer(connectionString));
 
@@ -25,6 +36,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApplication(builder.Configuration);
 
 var app = builder.Build();
+
+app.UseHangfireDashboard();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

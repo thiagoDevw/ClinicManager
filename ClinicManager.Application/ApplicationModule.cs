@@ -5,6 +5,7 @@ using ClinicManager.Application.Services.ServicesDoctor;
 using ClinicManager.Application.Services.ServicesEmail;
 using ClinicManager.Application.Services.ServicesPatient;
 using ClinicManager.Application.Services.ServicesService;
+using Hangfire;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SendGrid;
@@ -29,6 +30,7 @@ namespace ClinicManager.Application
             services.AddScoped<IPatientService, PatientService>();
             services.AddScoped<IService, ServiceManager>();
             services.AddHostedService<NotificationBackgroundService>();
+            services.AddScoped<EmailReminderService>();
 
             // Configuração do Email com SendGrid
             services.AddSingleton<IEmailSender>(provider =>
@@ -48,6 +50,5 @@ namespace ClinicManager.Application
 
             return services;
         }
-
     }
 }
