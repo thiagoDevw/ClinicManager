@@ -43,7 +43,7 @@ app.UseHangfireDashboard();
 RecurringJob.AddOrUpdate<EmailReminderService>(
     "send-email-reminders",
     service => service.SendEmailReminders(),
-    Cron.MinuteInterval(1)
+    Cron.MinuteInterval(5)
 );
 
 // Configure the HTTP request pipeline.

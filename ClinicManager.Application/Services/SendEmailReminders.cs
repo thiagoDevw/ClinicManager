@@ -44,24 +44,22 @@ namespace ClinicManager.Application.Services
                         continue; // Skip sending if the reminder was already sent
                     }
 
-                    if (now >= reminderDateTime && now < appointment.Start)
+                    var patient = appointment.Patient;
+                    var subject = "Lembrete da consulta";
+                    var message = $"Olá {patient.Name}, este é um lembrete de sua consulta marcada para {appointment.Start}.";
+
+                    var emailResult = await emailSender.SendEmailAsync(patient.Email, subject, message);
+
+                    if (!emailResult.IsSucess)
                     {
-                        var patient = appointment.Patient;
-                        var subject = "Lembrete da consulta";
-                        var message = $"Olá {patient.Name}, este é um lembrete de sua consulta marcada para {appointment.Start}.";
-
-                        var emailResult = await emailSender.SendEmailAsync(patient.Email, subject, message);
-
-                        if (!emailResult.IsSucess)
-                        {
-                            Console.WriteLine($"Erro ao enviar e-mail: {emailResult.Message}");
-                        }
-                        else
-                        {
-                            // Set cache entry to indicate the reminder has been sent
-                            _cache.Set(cacheKey, true, TimeSpan.FromMinutes(10)); // Cache expiration time
-                        }
+                        Console.WriteLine($"Erro ao enviar e-mail: {emailResult.Message}");
                     }
+                    else
+                    {
+                        // Set cache entry to indicate the reminder has been sent
+                        _cache.Set(cacheKey, true); // Cache expiration time
+                    }
+
                 }
             }
         }
