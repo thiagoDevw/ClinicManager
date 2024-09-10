@@ -17,21 +17,6 @@ namespace ClinicManager.Application.Services.ServicesEmail
 
         public async Task<ResultViewModel> SendEmailAsync(string toEmail, string subject, string body)
         {
-            if (string.IsNullOrWhiteSpace(toEmail))
-            {
-                throw new ArgumentNullException(nameof(toEmail), "O endereço de e-mail não pode ser nulo ou vazio.");
-            }
-
-            if (string.IsNullOrWhiteSpace(subject))
-            {
-                throw new ArgumentNullException(nameof(subject), "O assunto do e-mail não pode ser nulo ou vazio.");
-            }
-
-            if (string.IsNullOrWhiteSpace(body))
-            {
-                throw new ArgumentNullException(nameof(body), "O corpo do e-mail não pode ser nulo ou vazio.");
-            }
-
             try
             {
                 var from = new EmailAddress("thialexandre.tec@gmail.com", "Clinica Teste");

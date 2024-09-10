@@ -26,6 +26,6 @@ namespace ClinicManager.Core.Entities
         public string Agreement { get; set; }
         public DateTime Start {  get; set; }
         public DateTime End { get; set; }
-        public ServiceType TypeService { get; set; } 
+        public ServiceType TypeService { get; set; }
     }
 }

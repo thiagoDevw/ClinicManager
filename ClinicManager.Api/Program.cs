@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 using System.Text.Json;
 using ClinicManager.Application;
 using Hangfire;
+using ClinicManager.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +29,7 @@ builder.Services.AddHangfireServer();
 
 builder.Services.AddDbContext<ClinicDbContext>(o => o.UseSqlServer(connectionString));
 
-
+builder.Services.AddMemoryCache();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -38,6 +39,12 @@ builder.Services.AddApplication(builder.Configuration);
 var app = builder.Build();
 
 app.UseHangfireDashboard();
+
+RecurringJob.AddOrUpdate<EmailReminderService>(
+    "send-email-reminders",
+    service => service.SendEmailReminders(),
+    Cron.MinuteInterval(1)
+);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
