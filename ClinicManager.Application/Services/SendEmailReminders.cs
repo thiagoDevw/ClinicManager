@@ -24,7 +24,7 @@ namespace ClinicManager.Application.Services
 
                 var now = DateTime.Now;
 
-                var reminderTime = now.AddMinutes(5);
+                var reminderTime = now.AddDays(1);
 
                 var appointments = await dbContext.CustomerServices
                     .Include(c => c.Patient)
@@ -33,7 +33,7 @@ namespace ClinicManager.Application.Services
 
                 foreach (var appointment in appointments)
                 {
-                    var reminderDateTime = appointment.Start.AddMinutes(-5);
+                    var reminderDateTime = appointment.Start.AddDays(-1);
 
                     if (now >= reminderDateTime && now < appointment.Start)
                     {

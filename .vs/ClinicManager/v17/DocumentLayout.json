@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "S:\\Clinic Manager\\ClinicManager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.application\\services\\sendemailreminders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\services\\sendemailreminders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.application\\services\\servicescalendar\\googlecalendarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\services\\servicescalendar\\googlecalendarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.application\\services\\servicesemail\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\services\\servicesemail\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.application\\services\\sendemailreminders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\services\\sendemailreminders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.application\\applicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -193,17 +193,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "SendEmailReminders.cs",
               "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Services\\SendEmailReminders.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Services\\SendEmailReminders.cs",
               "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Services\\SendEmailReminders.cs",
               "RelativeToolTip": "ClinicManager.Application\\Services\\SendEmailReminders.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAADUAAABQAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAwwCMAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-09T20:11:04.216Z",
               "EditorCaption": ""
@@ -218,12 +218,11 @@
               "RelativeToolTip": "ClinicManager.Application\\ApplicationModule.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAiwB4AAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T22:01:32.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T22:01:32.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EmailSender.cs",
               "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Services\\ServicesEmail\\EmailSender.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Services\\ServicesEmail\\EmailSender.cs",
@@ -231,12 +230,11 @@
               "RelativeToolTip": "ClinicManager.Application\\Services\\ServicesEmail\\EmailSender.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T22:56:33.983Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-03T22:56:33.983Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GoogleCalendarService.cs",
               "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Services\\ServicesCalendar\\GoogleCalendarService.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Services\\ServicesCalendar\\GoogleCalendarService.cs",
@@ -257,8 +255,7 @@
               "RelativeToolTip": "ClinicManager.Api\\Controllers\\CustomerServiceController.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAgwCwAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T21:20:56.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T21:20:56.672Z"
             },
             {
               "$type": "Document",
@@ -270,8 +267,7 @@
               "RelativeToolTip": "ClinicManager.Application\\Services\\ServicesCustomer\\CustomerServiceManager.cs",
               "ViewState": "AQIAAHMAAAAAAAAAAAAcwBkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T21:17:02.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T21:17:02.768Z"
             },
             {
               "$type": "Document",
@@ -283,8 +279,7 @@
               "RelativeToolTip": "ClinicManager.Api\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-29T13:28:45.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-29T13:28:45.291Z"
             },
             {
               "$type": "Document",
@@ -296,8 +291,7 @@
               "RelativeToolTip": "ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-09-11T00:07:46.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-11T00:07:46.388Z"
             },
             {
               "$type": "Document",
@@ -321,8 +315,7 @@
               "RelativeToolTip": "ClinicManager.Api\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T20:40:38.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T20:40:38.595Z"
             },
             {
               "$type": "Document",
