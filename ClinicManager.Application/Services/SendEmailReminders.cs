@@ -35,20 +35,24 @@ namespace ClinicManager.Application.Services
                 {
                     var reminderDateTime = appointment.Start.AddMinutes(-5);
 
-                    var patient = appointment.Patient;
-                    var subject = "Lembrete da consulta";
-                    var message = $"Olá {patient.Name}, este é um lembrete de sua consulta marcada para {appointment.Start}.";
-
-                    var emailResult = await emailSender.SendEmailAsync(patient.Email, subject, message);
-
-                    if (emailResult.IsSucess)
+                    if (now >= reminderDateTime && now < appointment.Start)
                     {
-                        appointment.ReminderSent = true;
-                        await dbContext.SaveChangesAsync();
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Erro ao enviar e-mail: {emailResult.Message}");
+                        var patient = appointment.Patient;
+                        var subject = "Lembrete da consulta";
+                        var message = $"Olá {patient.Name}, este é um lembrete de sua consulta marcada para {appointment.Start}.";
+
+                        var emailResult = await emailSender.SendEmailAsync(patient.Email, subject, message);
+
+                        try 
+                        {
+                            appointment.ReminderSent = true;
+                            dbContext.CustomerServices.Update(appointment);
+                            await dbContext.SaveChangesAsync();
+                        }
+                        catch (Exception ex) 
+                        {
+                            Console.WriteLine($"Erro ao atualizar o ReminderSent: {ex.Message}");
+                        }
                     }
                 }
             }

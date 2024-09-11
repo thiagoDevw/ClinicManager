@@ -29,7 +29,6 @@ namespace ClinicManager.Application
             services.AddScoped<IDoctorService, DoctorService>();
             services.AddScoped<IPatientService, PatientService>();
             services.AddScoped<IService, ServiceManager>();
-            services.AddHostedService<NotificationBackgroundService>();
             services.AddScoped<EmailReminderService>();
 
             // Configuração do Email com SendGrid

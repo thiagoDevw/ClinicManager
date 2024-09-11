@@ -55,6 +55,9 @@ namespace ClinicManager.Application.Services.ServicesCalendar
         {
             var service = GetCalendarService();
 
+            var startDateInLocalTime = TimeZoneInfo.ConvertTime(startDate, TimeZoneInfo.FindSystemTimeZoneById("America/Sao_Paulo"));
+            var endDateInLocalTime = TimeZoneInfo.ConvertTime(endDate, TimeZoneInfo.FindSystemTimeZoneById("America/Sao_Paulo"));
+
             var calendarEvent = new Event
             {
                 Summary = $"Consulta de {patientName}",
