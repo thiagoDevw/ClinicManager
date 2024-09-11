@@ -1213,6 +1213,9 @@
           "Google.Apis.Calendar.v3": "1.68.0.3473",
           "Microsoft.EntityFrameworkCore.InMemory": "8.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "Microsoft.Extensions.FileProviders.Physical": "8.0.0",
           "SendGrid": "9.29.3"
         },
         "runtime": {

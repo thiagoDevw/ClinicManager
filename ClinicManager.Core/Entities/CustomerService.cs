@@ -27,6 +27,7 @@ namespace ClinicManager.Core.Entities
         public DateTime Start {  get; set; }
         public DateTime End { get; set; }
         public ServiceType TypeService { get; set; }
+        public bool ReminderSent { get; set; }
 
     }
 }

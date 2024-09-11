@@ -9,13 +9,10 @@ namespace ClinicManager.Application.Services
     public class EmailReminderService
     {
         private readonly IServiceProvider _serviceProvider;
-        private readonly IMemoryCache _cache;
 
-
-        public EmailReminderService(IServiceProvider serviceProvider, IMemoryCache cache)
+        public EmailReminderService(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
-            _cache = cache;
         }
 
         public async Task SendEmailReminders()
@@ -31,18 +28,12 @@ namespace ClinicManager.Application.Services
 
                 var appointments = await dbContext.CustomerServices
                     .Include(c => c.Patient)
-                    .Where(c => c.Start >= now && c.Start <= reminderTime)
+                    .Where(c => c.Start >= now && c.Start <= reminderTime && !c.ReminderSent)
                     .ToListAsync();
 
                 foreach (var appointment in appointments)
                 {
                     var reminderDateTime = appointment.Start.AddMinutes(-5);
-                    var cacheKey = $"ReminderSent_{appointment.Id}";
-
-                    if (_cache.TryGetValue(cacheKey, out bool isReminderSent) && isReminderSent)
-                    {
-                        continue; // Skip sending if the reminder was already sent
-                    }
 
                     var patient = appointment.Patient;
                     var subject = "Lembrete da consulta";
@@ -50,16 +41,15 @@ namespace ClinicManager.Application.Services
 
                     var emailResult = await emailSender.SendEmailAsync(patient.Email, subject, message);
 
-                    if (!emailResult.IsSucess)
+                    if (emailResult.IsSucess)
                     {
-                        Console.WriteLine($"Erro ao enviar e-mail: {emailResult.Message}");
+                        appointment.ReminderSent = true;
+                        await dbContext.SaveChangesAsync();
                     }
                     else
                     {
-                        // Set cache entry to indicate the reminder has been sent
-                        _cache.Set(cacheKey, true); // Cache expiration time
+                        Console.WriteLine($"Erro ao enviar e-mail: {emailResult.Message}");
                     }
-
                 }
             }
         }
