@@ -5,6 +5,7 @@ using ClinicManager.Application.Services.ServicesCalendar;
 using ClinicManager.Application.Services.ServicesEmail;
 using ClinicManager.Core.Entities;
 using ClinicManager.Infrastructure.Persistence;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace ClinicManager.Application.Services.ServicesCustomer
@@ -14,11 +15,13 @@ namespace ClinicManager.Application.Services.ServicesCustomer
         private readonly ClinicDbContext _context;
         private readonly IEmailSender _emailSender;
         private readonly GoogleCalendarService _googleCalendarService;
-        public CustomerServiceManager(ClinicDbContext context, IEmailSender emailSender, GoogleCalendarService googleCalendarService)
+        private readonly IMediator _mediator;
+        public CustomerServiceManager(ClinicDbContext context, IEmailSender emailSender, GoogleCalendarService googleCalendarService, IMediator mediator)
         {
             _context = context;
             _emailSender = emailSender;
             _googleCalendarService = googleCalendarService;
+            _mediator = mediator;
         }
 
         public ResultViewModel DeleteById(int id)
