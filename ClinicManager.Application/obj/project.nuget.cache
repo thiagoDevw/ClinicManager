@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "do+Eqam0hwlanPeZWRKH2ROALPotCTMlwM61pY5hZXVNjBLvUcYsuRatjzXjZS/p2BQKQtFhx08fUUGehK4ZVg==",
+  "dgSpecHash": "HgCBJegzLGhEvq7/08VyjC0YdXgto6Zd4zhi9aeem6i99iNSa631XG7YaynYbFtMEUmnh7k8U3WkfO85zw64zw==",
   "success": true,
   "projectFilePath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\ClinicManager.Application.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,8 @@
     "C:\\Users\\ta741\\.nuget\\packages\\hangfire.core\\1.8.14\\hangfire.core.1.8.14.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\hangfire.netcore\\1.8.14\\hangfire.netcore.1.8.14.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\hangfire.sqlserver\\1.8.14\\hangfire.sqlserver.1.8.14.nupkg.sha512",
+    "C:\\Users\\ta741\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
+    "C:\\Users\\ta741\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",

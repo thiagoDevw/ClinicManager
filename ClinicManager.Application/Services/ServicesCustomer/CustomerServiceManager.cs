@@ -165,8 +165,6 @@ namespace ClinicManager.Application.Services.ServicesCustomer
             {
                 return ResultViewModel<int>.Error($"Erro ao criar o atendimento: {ex.Message}");
             }
-
-            
         }
 
         public ResultViewModel Update(UpdateCustomerInputModel model)

@@ -12,6 +12,7 @@
     <PackageReference Include="Hangfire" Version="1.8.14" />
     <PackageReference Include="Hangfire.Core" Version="1.8.14" />
     <PackageReference Include="Hangfire.SqlServer" Version="1.8.14" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="SendGrid" Version="9.29.3" />
   </ItemGroup>
@@ -19,6 +20,12 @@
   <ItemGroup>
     <ProjectReference Include="..\ClinicManager.Core\ClinicManager.Core.csproj" />
     <ProjectReference Include="..\ClinicManager.Infrastructure\ClinicManager.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\CommandsCustomerService\DeleteCustomerService\" />
+    <Folder Include="Commands\CommandsCustomerService\UpdateCustomerService\" />
+    <Folder Include="Queries\" />
   </ItemGroup>
 
 </Project>

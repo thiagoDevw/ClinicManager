@@ -16,6 +16,8 @@ S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\Hangfire.Core
 S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\Hangfire.NetCore.dll
 S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\Hangfire.SqlServer.dll
 S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\Humanizer.dll
+S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\MediatR.dll
+S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\MediatR.Contracts.dll
 S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 S:\Clinic Manager\ClinicManager\ClinicManager.Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll

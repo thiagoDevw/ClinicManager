@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MQkDlf/GRAV5ezGzUp95+7r0UTFB0Iu3VMw1mbOBt1jlaPx9lWQRktCwKnEQgmct0wSk6HfVDtfa2/yST33XIA==",
+  "dgSpecHash": "Rry18uHzkhYw6fMTCOIdPq8JTO5R3NUKSXmmCWmI0DnGi3rNF3F/TH5IlMdAAP30pRwA+4SHfJmhIH/VLB70Pw==",
   "success": true,
   "projectFilePath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Api\\ClinicManager.Api.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,8 @@
     "C:\\Users\\ta741\\.nuget\\packages\\hangfire.netcore\\1.8.14\\hangfire.netcore.1.8.14.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\hangfire.sqlserver\\1.8.14\\hangfire.sqlserver.1.8.14.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\ta741\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
+    "C:\\Users\\ta741\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\ta741\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",
