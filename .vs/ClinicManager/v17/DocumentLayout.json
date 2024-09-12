@@ -44,22 +44,9 @@
               "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorHandler.cs",
               "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorHandler.cs",
               "RelativeToolTip": "ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-12T22:44:40.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\Entities\\Doctor.cs",
-              "RelativeDocumentMoniker": "ClinicManager.Core\\Entities\\Doctor.cs",
-              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\Entities\\Doctor.cs",
-              "RelativeToolTip": "ClinicManager.Core\\Entities\\Doctor.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwCEAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T22:41:27.987Z",
               "EditorCaption": ""
             },
             {
@@ -72,8 +59,7 @@
               "RelativeToolTip": "ClinicManager.Api\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T22:18:18.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-12T22:18:18.003Z"
             },
             {
               "$type": "Document",
@@ -85,8 +71,7 @@
               "RelativeToolTip": "ClinicManager.Application\\ApplicationModule.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAxwBcAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T22:16:52.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-12T22:16:52.5Z"
             },
             {
               "$type": "Document",
@@ -96,10 +81,22 @@
               "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorCommand.cs",
               "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorCommand.cs",
               "RelativeToolTip": "ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwB0AAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-12T22:02:51.828Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\Entities\\Doctor.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Core\\Entities\\Doctor.cs",
+              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\Entities\\Doctor.cs",
+              "RelativeToolTip": "ClinicManager.Core\\Entities\\Doctor.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwCEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T22:41:27.987Z"
             },
             {
               "$type": "Document",
@@ -111,8 +108,7 @@
               "RelativeToolTip": "ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerHandler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T22:02:39.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-12T22:02:39.037Z"
             }
           ]
         }
