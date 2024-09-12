@@ -5928,6 +5928,7 @@
       "Hangfire >= 1.8.14",
       "Hangfire.Core >= 1.8.14",
       "Hangfire.SqlServer >= 1.8.14",
+      "MediatR >= 12.4.1",
       "Microsoft.Data.SqlClient >= 5.2.2",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.8",
       "Microsoft.EntityFrameworkCore.InMemory >= 8.0.8",
@@ -6015,6 +6016,10 @@
           "Hangfire.SqlServer": {
             "target": "Package",
             "version": "[1.8.14, )"
+          },
+          "MediatR": {
+            "target": "Package",
+            "version": "[12.4.1, )"
           },
           "Microsoft.Data.SqlClient": {
             "target": "Package",

@@ -1,4 +1,5 @@
-﻿using ClinicManager.Application.Services;
+﻿using ClinicManager.Application.Commands.CommandsCustomerService.CreateCustomerService;
+using ClinicManager.Application.Services;
 using ClinicManager.Application.Services.ServicesCalendar;
 using ClinicManager.Application.Services.ServicesCustomer;
 using ClinicManager.Application.Services.ServicesDoctor;
@@ -19,7 +20,9 @@ namespace ClinicManager.Application
         public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
         {
             services
-                .AddServices(configuration);
+                .AddServices(configuration)
+                .AddHandlers();
+
 
             return services;
         }
@@ -31,7 +34,6 @@ namespace ClinicManager.Application
             services.AddScoped<IPatientService, PatientService>();
             services.AddScoped<IService, ServiceManager>();
             services.AddScoped<EmailReminderService>();
-            services.AddMediatR(Assembly.GetExecutingAssembly());
 
             // Configuração do Email com SendGrid
             services.AddSingleton<IEmailSender>(provider =>
@@ -49,6 +51,13 @@ namespace ClinicManager.Application
                 return new GoogleCalendarService(config);
             });
 
+            return services;
+        }
+
+        private static IServiceCollection AddHandlers(this IServiceCollection services)
+        {
+            services.AddMediatR(config =>
+                config.RegisterServicesFromAssemblyContaining<InsertCustomerServiceCommand>());
             return services;
         }
     }
