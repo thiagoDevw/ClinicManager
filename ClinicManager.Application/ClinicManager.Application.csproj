@@ -23,8 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\CommandsCustomerService\DeleteCustomerService\" />
-    <Folder Include="Commands\CommandsCustomerService\UpdateCustomerService\" />
     <Folder Include="Queries\" />
   </ItemGroup>
 
