@@ -9,6 +9,7 @@ using Hangfire;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SendGrid;
+using System.Reflection;
 
 
 namespace ClinicManager.Application
@@ -30,6 +31,7 @@ namespace ClinicManager.Application
             services.AddScoped<IPatientService, PatientService>();
             services.AddScoped<IService, ServiceManager>();
             services.AddScoped<EmailReminderService>();
+            services.AddMediatR(Assembly.GetExecutingAssembly());
 
             // Configuração do Email com SendGrid
             services.AddSingleton<IEmailSender>(provider =>

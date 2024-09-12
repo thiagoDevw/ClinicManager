@@ -1,11 +1,7 @@
 ﻿using ClinicManager.Application.Models;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClinicManager.Application.Commands.CommandsCustomerService.UpdateCustomerService
 {
@@ -20,9 +16,25 @@ namespace ClinicManager.Application.Commands.CommandsCustomerService.UpdateCusto
 
         public async Task<ResultViewModel> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
         {
+            var customerService = await _context.CustomerServices
+                .FirstOrDefaultAsync(c => c.Id == request.Id, cancellationToken);
 
+            if (customerService == null)
+            {
+                return ResultViewModel.Error("Atendimento não encontrado.");
+            }
 
-            throw new NotImplementedException();
+            customerService.PatientId = request.PatientId;
+            customerService.DoctorId = request.DoctorId;
+            customerService.ServiceId = request.ServiceId;
+            customerService.Agreement = request.Agreement;
+            customerService.Start = request.Start;
+            customerService.End = request.End;
+            customerService.TypeService = request.TypeService;
+
+            await _context.SaveChangesAsync(cancellationToken);
+
+            return ResultViewModel.Success();
         }
     }
 }

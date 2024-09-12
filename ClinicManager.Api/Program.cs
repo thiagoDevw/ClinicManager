@@ -5,10 +5,12 @@ using System.Text.Json;
 using ClinicManager.Application;
 using Hangfire;
 using ClinicManager.Application.Services;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
 builder.Services.AddControllers();
     
