@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Commands\CommandsPatients\UpdatePatients\" />
     <Folder Include="Queries\" />
   </ItemGroup>
 

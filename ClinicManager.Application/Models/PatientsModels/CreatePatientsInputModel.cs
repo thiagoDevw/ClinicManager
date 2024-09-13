@@ -15,7 +15,5 @@ namespace ClinicManager.Api.Models.PatientsModels
         public double Height { get; set; }
         public double Weight { get; set; }
         public string Address { get; set; }
-
-
     }
 }
