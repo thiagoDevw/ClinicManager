@@ -25,7 +25,6 @@ namespace ClinicManager.Application
 
         private static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<IPatientService, PatientService>();
             services.AddScoped<IService, ServiceManager>();
             services.AddScoped<EmailReminderService>();
 

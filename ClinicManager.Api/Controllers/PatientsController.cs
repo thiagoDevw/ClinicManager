@@ -1,9 +1,11 @@
 using ClinicManager.Api.Models.PatientsModels;
-using ClinicManager.Application.Models.PatientsModels;
-using ClinicManager.Application.Services.ServicesPatient;
-using ClinicManager.Core.Entities;
-using ClinicManager.Infrastructure.Persistence;
+using ClinicManager.Application.Commands.CommandsPatients.DeletePatients;
+using ClinicManager.Application.Commands.CommandsPatients.InsertPatients;
+using ClinicManager.Application.Queries.QueriesPatients;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
+using System.Numerics;
 
 namespace ClinicManager.Api.Controllers
 {
@@ -12,19 +14,20 @@ namespace ClinicManager.Api.Controllers
     
     public class PatientsController : ControllerBase
     {
-        private readonly ClinicDbContext _context;
-        private readonly IPatientService _patientService;
-        public PatientsController(ClinicDbContext context, IPatientService patientService)
+        private readonly IMediator _mediator;
+
+        public PatientsController(IMediator mediator)
         {
-            _context = context;
-            _patientService = patientService;
+            _mediator = mediator;
         }
+
 
         // GET api/patients
         [HttpGet]
-        public IActionResult GetAll([FromQuery] string query = "")
+        public async Task<IActionResult> GetAll([FromQuery] string query = "")
         {
-            var result = _patientService.GetAll(query);
+            var patientsQuery = new GetAllPatientsQuery(query);
+            var result = await _mediator.Send(patientsQuery);
 
             if (!result.IsSucess)
             {
@@ -36,9 +39,10 @@ namespace ClinicManager.Api.Controllers
         
         // GETBYID api/patients
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var result = _patientService.GetById(id);
+            var query = new GetPatientsByIdQuery(id);
+            var result = await _mediator.Send(query);
 
             if (!result.IsSucess)
             {
@@ -50,10 +54,27 @@ namespace ClinicManager.Api.Controllers
 
         // POST api/patients
         [HttpPost]
-        public IActionResult PostPatients([FromBody] CreatePatientsInputModel model) 
+        public async Task<IActionResult> PostPatients([FromBody] CreatePatientsInputModel model) 
         {
-            var result = _patientService.Insert(model);
+            var command = new InsertPatientCommand(
+                model.Name,
+                model.LastName,
+                model.DateOfBirth,
+                model.Phone,
+                model.Email,
+                model.CPF,
+                model.BloodType,
+                model.Height,
+                model.Weight,
+                model.Address
+            );
 
+            var result = await _mediator.Send(command);
+
+            if (!result.IsSucess)
+            {
+                return BadRequest(result.Message);
+            }
 
             return CreatedAtAction(nameof(GetById), new { id = result.Data }, model);
         }
@@ -61,14 +82,22 @@ namespace ClinicManager.Api.Controllers
 
         // PUT api/patients
         [HttpPut("{id}")]
-        public IActionResult PutPatients(int id, [FromBody] UpdatePatientsInputModel model)
+        public async Task<IActionResult> PutPatients(int id, [FromBody] UpdatePatientsInputModel model)
         {
-            if (model == null)
-            {
-                return BadRequest("Os dados do paciente são obrigatórios.");
-            }
+            var command = new InsertPatientCommand(
+                model.Name,
+                model.LastName,
+                model.DateOfBirth,
+                model.Phone,
+                model.Email,
+                model.CPF,
+                model.BloodType,
+                model.Height,
+                model.Weight,
+                model.Address
+            );
 
-            var result = _patientService.Update(id, model);
+            var result = await _mediator.Send(command);
 
             if (!result.IsSucess)
             {
@@ -80,9 +109,10 @@ namespace ClinicManager.Api.Controllers
 
         // DELETE api/patients
         [HttpDelete("{id}")]
-        public IActionResult DeletePatient(int id)
+        public async Task<IActionResult> DeletePatient(int id)
         {
-            var result = _patientService.DeleteById(id);
+            var command = new DeletePatientCommand(id);
+            var result = await _mediator.Send(command);
 
             if (!result.IsSucess)
             {
