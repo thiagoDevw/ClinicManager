@@ -17,7 +17,6 @@ namespace ClinicManager.Application.Commands.CommandsCustomerService.CreateCusto
             End = end;
             
         }
-
         public int PatientId { get; set; }
         public int ServiceId { get; set; }
         public int DoctorId { get; set; }

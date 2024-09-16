@@ -1,6 +1,7 @@
 ﻿using ClinicManager.Application.Models;
 using SendGrid;
 using SendGrid.Helpers.Mail;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace ClinicManager.Application.Services.ServicesEmail
@@ -25,7 +26,7 @@ namespace ClinicManager.Application.Services.ServicesEmail
 
                 var response = await _sendGridClient.SendEmailAsync(msg);
 
-                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                if (response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.Accepted)
                 {
                     return ResultViewModel.Success();
                 }
