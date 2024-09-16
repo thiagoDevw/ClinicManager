@@ -1,7 +1,6 @@
 ﻿using ClinicManager.Application.Commands.CommandsCustomerService.CreateCustomerService;
 using ClinicManager.Application.Services;
 using ClinicManager.Application.Services.ServicesCalendar;
-using ClinicManager.Application.Services.ServicesDoctor;
 using ClinicManager.Application.Services.ServicesEmail;
 using ClinicManager.Application.Services.ServicesPatient;
 using ClinicManager.Application.Services.ServicesService;
@@ -26,7 +25,6 @@ namespace ClinicManager.Application
 
         private static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<IDoctorService, DoctorService>();
             services.AddScoped<IPatientService, PatientService>();
             services.AddScoped<IService, ServiceManager>();
             services.AddScoped<EmailReminderService>();

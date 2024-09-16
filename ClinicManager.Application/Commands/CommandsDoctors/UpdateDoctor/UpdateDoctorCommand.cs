@@ -10,11 +10,6 @@ namespace ClinicManager.Application.Commands.CommandsDoctors.UpdateDoctor
 {
     public class UpdateDoctorCommand : IRequest<ResultViewModel<int>>
     {
-        public UpdateDoctorCommand(int id)
-        {
-            Id = id;
-        }
-
         public UpdateDoctorCommand(string name, string lastName, DateTime dateOfBirth, string phone, string email, string cPF, string bloodType, string address, string specialty, string cRM)
         {
             Name = name;

@@ -8,11 +8,10 @@ using System.Threading.Tasks;
 
 namespace ClinicManager.Application.Commands.CommandsDoctors.InsertDoctor
 {
-    public class InsertDoctorCommand : IRequest<int>
+    public class InsertDoctorCommand : IRequest<ResultViewModel<int>>
     {
-        public InsertDoctorCommand(int id, string name, string lastName, DateTime dateOfBirth, string phone, string email, string cPF, string bloodType, string address, string specialty, string cRM)
+        public InsertDoctorCommand(string name, string lastName, DateTime dateOfBirth, string phone, string email, string cPF, string bloodType, string address, string specialty, string cRM)
         {
-            Id = id;
             Name = name;
             LastName = lastName;
             DateOfBirth = dateOfBirth;
@@ -25,7 +24,6 @@ namespace ClinicManager.Application.Commands.CommandsDoctors.InsertDoctor
             CRM = cRM;
         }
 
-        public int Id { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }

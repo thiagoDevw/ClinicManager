@@ -1,10 +1,10 @@
 ﻿using ClinicManager.Api.Models.DoctorModels;
-using ClinicManager.Application.Models.DoctorModels;
-using ClinicManager.Application.Services.ServicesDoctor;
-using ClinicManager.Core.Entities;
-using ClinicManager.Infrastructure.Persistence;
+using ClinicManager.Application.Commands.CommandsDoctors.DeleteDoctor;
+using ClinicManager.Application.Commands.CommandsDoctors.InsertDoctor;
+using ClinicManager.Application.Commands.CommandsDoctors.UpdateDoctor;
+using ClinicManager.Application.Queries.QueriesDoctors;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace ClinicManager.Api.Controllers
 {
@@ -12,32 +12,31 @@ namespace ClinicManager.Api.Controllers
     [Route("api/doctors")]
     public class DoctorsController : ControllerBase
     {
-        private readonly IDoctorService _doctorService;
-        public DoctorsController(IDoctorService doctorService)
+        private readonly IMediator _mediator;
+        public DoctorsController(IMediator mediator)
         {
-            _doctorService = doctorService;
+            _mediator = mediator;
         }
 
 
         // GET api/doctors
         [HttpGet]
-        public IActionResult GetAll([FromQuery] string query = "")
+        public async Task<IActionResult> GetAll([FromQuery] string query = "")
         {
-            var result = _doctorService.GetAll(query);
+            // var result = _doctorService.GetAll(query);
 
-            if (!result.IsSucess)
-            {
-                return BadRequest(result.Message);
-            }
+            var doctorsQuery = new GetAllDoctorsQuery(query);
+            var result = await _mediator.Send(doctorsQuery);
 
             return Ok(result);
         }
 
         // GETBYID api/doctors
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var result = _doctorService.GetById(id);
+            var doctorQuery = new GetDoctorByIdQuery(id);
+            var result = await _mediator.Send(doctorQuery);
 
             if (!result.IsSucess)
             {
@@ -49,9 +48,22 @@ namespace ClinicManager.Api.Controllers
 
         // POST api/doctors
         [HttpPost]
-        public IActionResult PostDoctor([FromBody] CreateDoctorInputModel model)
+        public async Task<IActionResult> PostDoctor([FromBody] CreateDoctorInputModel model)
         {
-            var result = _doctorService.Insert(model);
+            var doctor = new InsertDoctorCommand(
+                model.Name,
+                model.LastName,
+                model.DateOfBirth,
+                model.Phone,
+                model.Email,
+                model.CPF,
+                model.BloodType,
+                model.Address,
+                model.Specialty,
+                model.CRM
+            );
+
+            var result = await _mediator.Send(doctor);
 
 
             return CreatedAtAction(nameof(GetById), new { id = result.Data }, model);
@@ -59,14 +71,27 @@ namespace ClinicManager.Api.Controllers
 
         // PUT api/doctors
         [HttpPut("{id}")]
-        public IActionResult PutDoctor(int id, [FromBody] UpdateDoctorInputModel model)
+        public async Task<IActionResult> PutDoctor(int id, [FromBody] UpdateDoctorInputModel model)
         {
             if (model == null)
             {
                 return BadRequest("Os dados do médico são obrigatórios.");
             }
 
-            var result = _doctorService.Update(id, model);
+            var command = new UpdateDoctorCommand(
+                model.Name,
+                model.LastName,
+                model.DateOfBirth,
+                model.Phone,
+                model.Email,
+                model.CPF,
+                model.BloodType,
+                model.Address,
+                model.Specialty,
+                model.CRM
+            );
+
+            var result = await _mediator.Send(command);
 
             if (!result.IsSucess)
             {
@@ -78,9 +103,11 @@ namespace ClinicManager.Api.Controllers
 
         // DELETE api/doctors
         [HttpDelete("{id}")]
-        public IActionResult DeleteDoctor(int id)
+        public async Task<IActionResult> DeleteDoctor(int id)
         {
-            var result = _doctorService.DeleteById(id);
+            var command = new DeleteDoctorCommand(id);
+
+            var result = await _mediator.Send(command);
 
             if (!result.IsSucess)
             {

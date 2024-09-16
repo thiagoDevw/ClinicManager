@@ -1,10 +1,11 @@
-﻿using ClinicManager.Core.Entities;
+﻿using ClinicManager.Application.Models;
+using ClinicManager.Core.Entities;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 
 namespace ClinicManager.Application.Commands.CommandsDoctors.InsertDoctor
 {
-    public class InsertDoctorHandler : IRequestHandler<InsertDoctorCommand, int>
+    public class InsertDoctorHandler : IRequestHandler<InsertDoctorCommand, ResultViewModel<int>>
     {
         private readonly ClinicDbContext _context;
 
@@ -13,7 +14,7 @@ namespace ClinicManager.Application.Commands.CommandsDoctors.InsertDoctor
             _context = context;
         }
 
-        public async Task<int> Handle(InsertDoctorCommand request, CancellationToken cancellationToken)
+        public async Task<ResultViewModel<int>> Handle(InsertDoctorCommand request, CancellationToken cancellationToken)
         {
             var doctor = new Doctor
             {
@@ -32,7 +33,7 @@ namespace ClinicManager.Application.Commands.CommandsDoctors.InsertDoctor
             _context.Doctors.Add(doctor);
             await _context.SaveChangesAsync(cancellationToken);
 
-            return doctor.Id;
+            return ResultViewModel<int>.Success(doctor.Id);
         }
     }
 }
