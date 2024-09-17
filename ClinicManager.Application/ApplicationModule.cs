@@ -2,8 +2,6 @@
 using ClinicManager.Application.Services;
 using ClinicManager.Application.Services.ServicesCalendar;
 using ClinicManager.Application.Services.ServicesEmail;
-using ClinicManager.Application.Services.ServicesPatient;
-using ClinicManager.Application.Services.ServicesService;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SendGrid;
@@ -25,7 +23,6 @@ namespace ClinicManager.Application
 
         private static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<IService, ServiceManager>();
             services.AddScoped<EmailReminderService>();
 
             // Configuração do Email com SendGrid

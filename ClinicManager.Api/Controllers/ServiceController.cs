@@ -1,9 +1,13 @@
+using Azure.Core;
 using ClinicManager.Api.Models.ServiceModels;
-using ClinicManager.Application.Models.ServiceModels;
-using ClinicManager.Application.Services.ServicesService;
-using ClinicManager.Core.Entities;
-using ClinicManager.Infrastructure.Persistence;
+using ClinicManager.Application.Commands.CommandsServices.DeleteService;
+using ClinicManager.Application.Commands.CommandsServices.InsertService;
+using ClinicManager.Application.Commands.CommandsServices.UpdateService;
+using ClinicManager.Application.Queries.QueriesServices;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Newtonsoft.Json.Linq;
 
 namespace ClinicManager.Api.Controllers
 {
@@ -11,17 +15,19 @@ namespace ClinicManager.Api.Controllers
     [ApiController]
     public class ServiceController : ControllerBase
     {
-        private readonly IService _service;
-        public ServiceController(IService service)
+        private readonly IMediator _mediator;
+
+        public ServiceController(IMediator mediator)
         {
-            _service = service;
+            _mediator = mediator;
         }
 
         // GET api/service
         [HttpGet]
-        public IActionResult GetAll([FromQuery] string? query = "")
+        public async Task<IActionResult> GetAll([FromQuery] string? query = "")
         {
-            var result = _service.GetAll(query);
+            var servicesQuery = new GetAllServicesQuery(query);
+            var result = await _mediator.Send(servicesQuery);
 
             if (!result.IsSucess)
             {
@@ -33,13 +39,14 @@ namespace ClinicManager.Api.Controllers
 
         // GETBYID api/service
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var result = _service.GetById(id);
+            var query = new GetServiceByIdQuery(id);
+            var result = await _mediator.Send(query);
 
             if (!result.IsSucess)
             {
-                return BadRequest(result.Message);
+                return NotFound(result.Message);
             }
 
             return Ok(result);
@@ -48,23 +55,43 @@ namespace ClinicManager.Api.Controllers
 
         // POST api/service
         [HttpPost]
-        public IActionResult PostService([FromBody] CreateServiceInputModel model)
+        public async Task<IActionResult> PostService([FromBody] CreateServiceInputModel model)
         {
-            var result = _service.Insert(model);
+            var command = new InsertServiceCommand(
+                model.Name,
+                model.Description,
+                model.Value,
+                model.Duration
+            );
+
+            var result = await _mediator.Send(command);
+
+            if (!result.IsSucess)
+            {
+                return BadRequest(result.Message);
+            }
 
             return CreatedAtAction(nameof(GetById), new { id = result.Data }, model);
         }
 
         // PUT api/service
         [HttpPut("{id}")]
-        public IActionResult PutService(int id, [FromBody] UpdateServiceInputModel model)
+        public async Task<IActionResult> PutService(int id, [FromBody] UpdateServiceInputModel model)
         {
             if (model == null)
             {
                 return BadRequest("Os dados do serviço são obrigatórios.");
             }
 
-            var result = _service.Update(id, model);
+            var command = new UpdateServiceCommand(
+                id,
+                model.Name,
+                model.Description,
+                model.Value,
+                model.Duration
+            );
+
+            var result = await _mediator.Send(command);
 
             if (!result.IsSucess)
             {
@@ -76,9 +103,10 @@ namespace ClinicManager.Api.Controllers
 
         // DELETE api/service
         [HttpDelete("{id}")]
-        public IActionResult DeleteService(int id)
+        public async Task<IActionResult> DeleteService(int id)
         {
-            var result = _service.DeleteById(id);
+            var command = new DeleteServiceCommand(id);
+            var result = await _mediator.Send(command);
 
             if (!result.IsSucess)
             {

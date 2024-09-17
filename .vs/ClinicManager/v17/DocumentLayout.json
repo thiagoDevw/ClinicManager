@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "S:\\Clinic Manager\\ClinicManager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.application\\commands\\commandscustomerservice\\insertcustomerservice\\insertcustomerservicecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\commands\\commandscustomerservice\\insertcustomerservice\\insertcustomerservicecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.application\\commands\\commandscustomerservice\\insertcustomerservice\\insertcustomerhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\commands\\commandscustomerservice\\insertcustomerservice\\insertcustomerhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.application\\applicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\applicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45BB6B21-D8E2-4159-91D5-0CA55828A4B3}|ClinicManager.Api\\ClinicManager.Api.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.api\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45BB6B21-D8E2-4159-91D5-0CA55828A4B3}|ClinicManager.Api\\ClinicManager.Api.csproj|solutionrelative:clinicmanager.api\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{45BB6B21-D8E2-4159-91D5-0CA55828A4B3}|ClinicManager.Api\\ClinicManager.Api.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.api\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,16 +43,8 @@
       "RelativeMoniker": "D:0:0:{45BB6B21-D8E2-4159-91D5-0CA55828A4B3}|ClinicManager.Api\\ClinicManager.Api.csproj|solutionrelative:clinicmanager.api\\controllers\\customerservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.application\\commands\\commandscustomerservice\\insertcustomerservice\\insertcustomerhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\commands\\commandscustomerservice\\insertcustomerservice\\insertcustomerhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.application\\services\\servicesemail\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\services\\servicesemail\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|s:\\clinic manager\\clinicmanager\\clinicmanager.application\\commands\\commandscustomerservice\\insertcustomerservice\\insertcustomerservicecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\commands\\commandscustomerservice\\insertcustomerservice\\insertcustomerservicecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,32 +58,59 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PatientsController.cs",
-              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Api\\Controllers\\PatientsController.cs",
-              "RelativeDocumentMoniker": "ClinicManager.Api\\Controllers\\PatientsController.cs",
-              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Api\\Controllers\\PatientsController.cs",
-              "RelativeToolTip": "ClinicManager.Api\\Controllers\\PatientsController.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAAHkAAAAfAAAA",
+              "DocumentIndex": 3,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Api\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Api\\Controllers\\ServiceController.cs",
+              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Api\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "ClinicManager.Api\\Controllers\\ServiceController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwHcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T23:20:43.586Z",
+              "WhenOpened": "2024-09-17T12:15:12.126Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "InsertDoctorHandler.cs",
-              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorHandler.cs",
-              "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorHandler.cs",
-              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorHandler.cs",
-              "RelativeToolTip": "ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAA5AAAA",
+              "DocumentIndex": 2,
+              "Title": "ApplicationModule.cs",
+              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\ApplicationModule.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Application\\ApplicationModule.cs",
+              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\ApplicationModule.cs",
+              "RelativeToolTip": "ClinicManager.Application\\ApplicationModule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T22:57:34.829Z"
+              "WhenOpened": "2024-09-16T21:35:28.844Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "InsertCustomerHandler.cs",
+              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerHandler.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerHandler.cs",
+              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerHandler.cs",
+              "RelativeToolTip": "ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T21:01:38.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InsertCustomerServiceCommand.cs",
+              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerServiceCommand.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerServiceCommand.cs",
+              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerServiceCommand.cs",
+              "RelativeToolTip": "ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerServiceCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T21:29:48.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "DoctorsController.cs",
               "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Api\\Controllers\\DoctorsController.cs",
               "RelativeDocumentMoniker": "ClinicManager.Api\\Controllers\\DoctorsController.cs",
@@ -91,20 +122,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationModule.cs",
-              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\ApplicationModule.cs",
-              "RelativeDocumentMoniker": "ClinicManager.Application\\ApplicationModule.cs",
-              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\ApplicationModule.cs",
-              "RelativeToolTip": "ClinicManager.Application\\ApplicationModule.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAxAAAA",
+              "DocumentIndex": 7,
+              "Title": "InsertDoctorHandler.cs",
+              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorHandler.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorHandler.cs",
+              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorHandler.cs",
+              "RelativeToolTip": "ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T21:35:28.844Z",
+              "WhenOpened": "2024-09-16T22:57:34.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PatientsController.cs",
+              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Api\\Controllers\\PatientsController.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Api\\Controllers\\PatientsController.cs",
+              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Api\\Controllers\\PatientsController.cs",
+              "RelativeToolTip": "ClinicManager.Api\\Controllers\\PatientsController.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAwwHkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T23:20:43.586Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "UpdateDoctorCommand.cs",
               "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsDoctors\\UpdateDoctor\\UpdateDoctorCommand.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CommandsDoctors\\UpdateDoctor\\UpdateDoctorCommand.cs",
@@ -116,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "InsertDoctorCommand.cs",
               "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorCommand.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CommandsDoctors\\InsertDoctor\\InsertDoctorCommand.cs",
@@ -128,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "EmailSender.cs",
               "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Services\\ServicesEmail\\EmailSender.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Services\\ServicesEmail\\EmailSender.cs",
@@ -140,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "CustomerServiceController.cs",
               "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Api\\Controllers\\CustomerServiceController.cs",
               "RelativeDocumentMoniker": "ClinicManager.Api\\Controllers\\CustomerServiceController.cs",
@@ -149,30 +192,6 @@
               "ViewState": "AQIAABMAAAAAAAAAAAAgwBUAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T21:19:02.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "InsertCustomerHandler.cs",
-              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerHandler.cs",
-              "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerHandler.cs",
-              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerHandler.cs",
-              "RelativeToolTip": "ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerHandler.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBsAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T21:01:38.672Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "InsertCustomerServiceCommand.cs",
-              "DocumentMoniker": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerServiceCommand.cs",
-              "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerServiceCommand.cs",
-              "ToolTip": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerServiceCommand.cs",
-              "RelativeToolTip": "ClinicManager.Application\\Commands\\CommandsCustomerService\\InsertCustomerService\\InsertCustomerServiceCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T21:29:48.171Z"
             }
           ]
         }
