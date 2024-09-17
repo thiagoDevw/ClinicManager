@@ -4,7 +4,7 @@ using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ClinicManager.Application.Queries.QueriesDoctors
+namespace ClinicManager.Application.Queries.Doctors.GetAllDoctors
 {
     public class GetAllDoctorsHandler : IRequestHandler<GetAllDoctorsQuery, ResultViewModel<List<DoctorItemViewModel>>>
     {
@@ -21,7 +21,7 @@ namespace ClinicManager.Application.Queries.QueriesDoctors
 
             if (!string.IsNullOrWhiteSpace(request.Query))
             {
-                var query = request.Query .ToLower();
+                var query = request.Query.ToLower();
                 doctorsQuery = doctorsQuery.Where(d =>
                 d.Name.ToLower().Contains(query) ||
                 d.LastName.ToLower().Contains(query) ||

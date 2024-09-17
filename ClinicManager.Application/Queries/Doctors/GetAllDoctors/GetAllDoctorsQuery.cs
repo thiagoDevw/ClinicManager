@@ -4,7 +4,7 @@ using MediatR;
 using System.Collections.Generic;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
-namespace ClinicManager.Application.Queries.QueriesDoctors
+namespace ClinicManager.Application.Queries.Doctors.GetAllDoctors
 {
     public class GetAllDoctorsQuery : IRequest<ResultViewModel<List<DoctorItemViewModel>>>
     {

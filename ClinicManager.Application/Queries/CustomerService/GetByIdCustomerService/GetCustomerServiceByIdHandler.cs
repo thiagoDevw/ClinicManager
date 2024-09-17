@@ -4,7 +4,7 @@ using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ClinicManager.Application.Queries.QueriesCustomerService
+namespace ClinicManager.Application.Queries.CustomerService.GetByIdCustomerService
 {
     public class GetCustomerServiceByIdHandler : IRequestHandler<GetCustomerServiceByIdQuery, ResultViewModel<CustomerViewModel>>
     {

@@ -1,11 +1,10 @@
 using ClinicManager.Api.Models.PatientsModels;
 using ClinicManager.Application.Commands.CommandsPatients.DeletePatients;
 using ClinicManager.Application.Commands.CommandsPatients.InsertPatients;
-using ClinicManager.Application.Queries.QueriesPatients;
+using ClinicManager.Application.Queries.Patients.GetAllPatients;
+using ClinicManager.Application.Queries.Patients.GetByIdPatients;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
-using System.Numerics;
 
 namespace ClinicManager.Api.Controllers
 {

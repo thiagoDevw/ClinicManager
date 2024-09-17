@@ -2,7 +2,7 @@
 using ClinicManager.Application.Models.ServiceModels;
 using MediatR;
 
-namespace ClinicManager.Application.Queries.QueriesServices
+namespace ClinicManager.Application.Queries.Services.GetAllServices
 {
     public class GetAllServicesQuery : IRequest<ResultViewModel<List<ServiceItemViewModel>>>
     {

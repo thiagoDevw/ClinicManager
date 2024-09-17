@@ -2,7 +2,8 @@
 using ClinicManager.Application.Commands.CommandsDoctors.DeleteDoctor;
 using ClinicManager.Application.Commands.CommandsDoctors.InsertDoctor;
 using ClinicManager.Application.Commands.CommandsDoctors.UpdateDoctor;
-using ClinicManager.Application.Queries.QueriesDoctors;
+using ClinicManager.Application.Queries.Doctors.GetAllDoctors;
+using ClinicManager.Application.Queries.Doctors.GetByIdDoctor;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

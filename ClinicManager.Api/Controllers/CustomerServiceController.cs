@@ -1,7 +1,8 @@
 ﻿using ClinicManager.Api.Models.CustomerModels;
 using ClinicManager.Application.Commands.CommandsCustomerService.CreateCustomerService;
 using ClinicManager.Application.Commands.CommandsCustomerService.DeleteCustomerService;
-using ClinicManager.Application.Queries.QueriesCustomerService;
+using ClinicManager.Application.Queries.CustomerService.GetAllCustomerService;
+using ClinicManager.Application.Queries.CustomerService.GetByIdCustomerService;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

@@ -3,7 +3,7 @@ using ClinicManager.Application.Models;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 
-namespace ClinicManager.Application.Queries.QueriesPatients
+namespace ClinicManager.Application.Queries.Patients.GetByIdPatients
 {
     public class GetPatientByIdHandler : IRequestHandler<GetPatientsByIdQuery, ResultViewModel<PatientViewModel>>
     {

@@ -1,13 +1,11 @@
-using Azure.Core;
 using ClinicManager.Api.Models.ServiceModels;
 using ClinicManager.Application.Commands.CommandsServices.DeleteService;
 using ClinicManager.Application.Commands.CommandsServices.InsertService;
 using ClinicManager.Application.Commands.CommandsServices.UpdateService;
-using ClinicManager.Application.Queries.QueriesServices;
+using ClinicManager.Application.Queries.Services.GetAllServices;
+using ClinicManager.Application.Queries.Services.GetByIdServices;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Newtonsoft.Json.Linq;
 
 namespace ClinicManager.Api.Controllers
 {

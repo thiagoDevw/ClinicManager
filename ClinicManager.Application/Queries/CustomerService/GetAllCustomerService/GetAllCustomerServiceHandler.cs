@@ -4,7 +4,7 @@ using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ClinicManager.Application.Queries.QueriesCustomerService
+namespace ClinicManager.Application.Queries.CustomerService.GetAllCustomerService
 {
     public class GetAllCustomerServiceHandler : IRequestHandler<GetAllCustomerServiceQuery, ResultViewModel<List<CustomerItemViewModel>>>
     {
@@ -33,7 +33,7 @@ namespace ClinicManager.Application.Queries.QueriesCustomerService
 
             // Logging para verificar os resultados filtrados
             var filteredCount = await query.CountAsync(cancellationToken);
-            System.Console.WriteLine($"Número de registros após o filtro: {filteredCount}");
+            Console.WriteLine($"Número de registros após o filtro: {filteredCount}");
 
             var totalRecords = await _context.CustomerServices.CountAsync(cancellationToken);
 

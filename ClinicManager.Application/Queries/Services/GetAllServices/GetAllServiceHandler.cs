@@ -3,7 +3,7 @@ using ClinicManager.Application.Models.ServiceModels;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 
-namespace ClinicManager.Application.Queries.QueriesServices
+namespace ClinicManager.Application.Queries.Services.GetAllServices
 {
     public class GetAllServiceHandler : IRequestHandler<GetAllServicesQuery, ResultViewModel<List<ServiceItemViewModel>>>
     {

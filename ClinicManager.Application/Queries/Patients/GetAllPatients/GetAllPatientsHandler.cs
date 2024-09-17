@@ -4,7 +4,7 @@ using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace ClinicManager.Application.Queries.QueriesPatients
+namespace ClinicManager.Application.Queries.Patients.GetAllPatients
 {
     public class GetAllPatientsHandler : IRequestHandler<GetAllPatientsQuery, ResultViewModel<List<PatientItemViewModel>>>
     {

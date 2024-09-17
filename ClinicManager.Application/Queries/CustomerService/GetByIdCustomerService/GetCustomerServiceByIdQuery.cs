@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicManager.Application.Queries.QueriesCustomerService
+namespace ClinicManager.Application.Queries.CustomerService.GetByIdCustomerService
 {
     public class GetCustomerServiceByIdQuery : IRequest<ResultViewModel<CustomerViewModel>>
     {

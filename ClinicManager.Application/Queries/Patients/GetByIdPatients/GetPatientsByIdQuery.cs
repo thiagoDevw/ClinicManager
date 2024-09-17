@@ -2,7 +2,7 @@
 using ClinicManager.Application.Models;
 using MediatR;
 
-namespace ClinicManager.Application.Queries.QueriesPatients
+namespace ClinicManager.Application.Queries.Patients.GetByIdPatients
 {
     public class GetPatientsByIdQuery : IRequest<ResultViewModel<PatientViewModel>>
     {

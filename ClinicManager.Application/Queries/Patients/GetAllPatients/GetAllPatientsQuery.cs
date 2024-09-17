@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
-namespace ClinicManager.Application.Queries.QueriesPatients
+namespace ClinicManager.Application.Queries.Patients.GetAllPatients
 {
     public class GetAllPatientsQuery : IRequest<ResultViewModel<List<PatientItemViewModel>>>
     {
