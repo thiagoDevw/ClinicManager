@@ -7,11 +7,15 @@ namespace ClinicManager.Application.Queries.CustomerService.GetAllCustomerServic
 {
     public class GetAllCustomerServiceQuery : IRequest<ResultViewModel<List<CustomerItemViewModel>>>
     {
-        public GetAllCustomerServiceQuery(string search)
+        public GetAllCustomerServiceQuery(string search, int? page, int? pageSize)
         {
             Search = search;
+            Page = page;
+            PageSize = pageSize;
         }
 
         public string Search { get; set; }
+        public int? Page { get; set; } // Para paginação
+        public int? PageSize { get; set; } // Para paginação
     }
 }

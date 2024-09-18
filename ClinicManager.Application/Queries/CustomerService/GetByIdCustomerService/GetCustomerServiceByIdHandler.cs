@@ -1,5 +1,7 @@
 ﻿using ClinicManager.Api.Models.CustomerModels;
 using ClinicManager.Application.Models;
+using ClinicManager.Core.Entities;
+using ClinicManager.Core.Repositories;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -8,36 +10,35 @@ namespace ClinicManager.Application.Queries.CustomerService.GetByIdCustomerServi
 {
     public class GetCustomerServiceByIdHandler : IRequestHandler<GetCustomerServiceByIdQuery, ResultViewModel<CustomerViewModel>>
     {
-        private readonly ClinicDbContext _context;
+        private readonly ICustomerServiceRepository _repository;
 
-        public GetCustomerServiceByIdHandler(ClinicDbContext context)
+        public GetCustomerServiceByIdHandler(ICustomerServiceRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel<CustomerViewModel>> Handle(GetCustomerServiceByIdQuery request, CancellationToken cancellationToken)
         {
-            var customer = await _context.CustomerServices
-                .Where(c => c.Id == request.Id)
-                .Select(c => new CustomerViewModel
-                {
-                    Id = c.Id,
-                    PatientName = c.Patient.Name,
-                    DoctorName = c.Doctor.Name,
-                    ServiceName = c.Service.Name,
-                    Agreement = c.Agreement,
-                    Start = c.Start,
-                    End = c.End,
-                    TypeService = c.TypeService
-                })
-                .FirstOrDefaultAsync(cancellationToken);
+            var customerService = await _repository.GetByIdAsync(request.Id);
 
-            if (customer == null)
+            if (customerService == null)
             {
                 return ResultViewModel<CustomerViewModel>.Error("Atendimento não encontrado.");
             }
 
-            return ResultViewModel<CustomerViewModel>.Success(customer);
+            var customerViewModel = new CustomerViewModel
+            {
+                Id = customerService.Id,
+                PatientName = customerService.Patient.Name,
+                DoctorName = customerService.Doctor.Name,
+                ServiceName = customerService.Service.Name,
+                Agreement = customerService.Agreement,
+                Start = customerService.Start,
+                End = customerService.End,
+                TypeService = customerService.TypeService
+            };
+
+            return ResultViewModel<CustomerViewModel>.Success(customerViewModel);
         }
     }
 }

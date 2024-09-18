@@ -20,9 +20,9 @@ namespace ClinicManager.Api.Controllers
 
         // GET: api/CustomerService
         [HttpGet]
-        public async Task<IActionResult> GetAll(string search = ""/*, int page = 1, int pageSize = 3*/)
+        public async Task<IActionResult> GetAll(string search = "", int page = 1, int pageSize = 3)
         {
-            var query = new GetAllCustomerServiceQuery(search);
+            var query = new GetAllCustomerServiceQuery(search, page, pageSize);
             var result = await _mediator.Send(query);
 
             if (!result.IsSucess)

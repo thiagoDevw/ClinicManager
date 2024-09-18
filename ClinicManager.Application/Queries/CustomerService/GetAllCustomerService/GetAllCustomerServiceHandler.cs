@@ -16,21 +16,19 @@ namespace ClinicManager.Application.Queries.CustomerService.GetAllCustomerServic
 
         public async Task<ResultViewModel<List<CustomerItemViewModel>>> Handle(GetAllCustomerServiceQuery request, CancellationToken cancellationToken)
         {
-            var result = await _repository.GetAllAsync(request.Search, request.Page, request.PageSize);
-
-            int totalRecords = result.TotalRecords;
-            List<CustomerService> customerServices = result.CustomerServices;
-
-            // Convertendo os dados para ViewModel
+            var (totalRecords, customerServices) = await _repository.GetAllAsync(
+                search: request.Search,
+                page: request.Page,
+                pageSize: request.PageSize
+            );
             var customers = customerServices.Select(c => new CustomerItemViewModel(
-                    c.Id,
-                    c.Patient.Name,
-                    c.Doctor.Name,
-                    c.Service.Name,
-                    c.Agreement
-                )).ToList();
+                c.Id,
+                c.Patient.Name,
+                c.Doctor.Name,
+                c.Service.Name,
+                c.Agreement
+            )).ToList();
 
-            // Retornando o resultado final
             return ResultViewModel<List<CustomerItemViewModel>>.Success(customers);
         }
     }
