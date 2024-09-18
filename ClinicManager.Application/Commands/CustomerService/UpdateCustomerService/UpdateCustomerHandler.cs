@@ -1,4 +1,5 @@
 ﻿using ClinicManager.Application.Models;
+using ClinicManager.Core.Repositories;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -7,18 +8,16 @@ namespace ClinicManager.Application.Commands.CommandsCustomerService.UpdateCusto
 {
     public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, ResultViewModel>
     {
-        private readonly ClinicDbContext _context;
+        private readonly ICustomerServiceRepository _repository;
 
-        public UpdateCustomerHandler(ClinicDbContext context)
+        public UpdateCustomerHandler(ICustomerServiceRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
         {
-            var customerService = await _context.CustomerServices
-                .FirstOrDefaultAsync(c => c.Id == request.Id, cancellationToken);
-
+            var customerService = await _repository.GetByIdAsync(request.Id);
             if (customerService == null)
             {
                 return ResultViewModel.Error("Atendimento não encontrado.");
@@ -32,7 +31,7 @@ namespace ClinicManager.Application.Commands.CommandsCustomerService.UpdateCusto
             customerService.End = request.End;
             customerService.TypeService = request.TypeService;
 
-            await _context.SaveChangesAsync(cancellationToken);
+            await _repository.UpdateAsync(customerService);
 
             return ResultViewModel.Success();
         }

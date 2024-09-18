@@ -1,4 +1,5 @@
 ﻿using ClinicManager.Application.Models;
+using ClinicManager.Core.Repositories;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -7,25 +8,23 @@ namespace ClinicManager.Application.Commands.CommandsCustomerService.DeleteCusto
 {
     internal class DeleteCustomerHandler : IRequestHandler<DeleteCustomerCommand, ResultViewModel>
     {
-        private readonly ClinicDbContext _context;
+        private readonly ICustomerServiceRepository _repository;
 
-        public DeleteCustomerHandler(ClinicDbContext context)
+        public DeleteCustomerHandler(ICustomerServiceRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel> Handle(DeleteCustomerCommand request, CancellationToken cancellationToken)
         {
-            var customerService = await _context.CustomerServices
-                .FirstOrDefaultAsync(c => c.Id == request.Id, cancellationToken);
+            var customerService = await _repository.GetByIdAsync(request.Id);
 
             if (customerService == null)
             {
                 return ResultViewModel.Error("Atendimento não encontrado.");
             }
-            _context.CustomerServices.Remove(customerService);
-            await _context.SaveChangesAsync(cancellationToken);
 
+            await _repository.DeleteAsync(request.Id);
             return ResultViewModel.Success();
         }
     }

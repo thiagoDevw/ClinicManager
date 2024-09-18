@@ -1,12 +1,10 @@
-using ClinicManager.Infrastructure.Persistence;
-using Microsoft.EntityFrameworkCore;
-using System.Text.Json.Serialization;
-using System.Text.Json;
 using ClinicManager.Application;
-using Hangfire;
 using ClinicManager.Application.Services;
-using System.Reflection;
-using MediatR;
+using ClinicManager.Infrastructure;
+using Hangfire;
+using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,8 +14,7 @@ builder.Services.AddControllers();
     
 
 //builder.Services.AddDbContext<ClinicDbContext>(o => o.UseInMemoryDatabase("ClinicManagerDb"));
-var connectionString = 
-    builder.Configuration.GetConnectionString("ClinicManagerCs");
+
 
 var connectionStringHangfire = 
     builder.Configuration.GetConnectionString("HangfireConnection");
@@ -29,14 +26,15 @@ builder.Services.AddHangfire((sp, config) =>
 
 builder.Services.AddHangfireServer();
 
-builder.Services.AddDbContext<ClinicDbContext>(o => o.UseSqlServer(connectionString));
 
 builder.Services.AddMemoryCache();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddApplication(builder.Configuration);
+builder.Services
+    .AddApplication(builder.Configuration)
+    .AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 

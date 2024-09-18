@@ -2,6 +2,7 @@
 using ClinicManager.Application.Models;
 using ClinicManager.Application.Services.ServicesEmail;
 using ClinicManager.Core.Entities;
+using ClinicManager.Core.Repositories;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 
@@ -11,11 +12,13 @@ namespace ClinicManager.Application.Commands.CommandsCustomerService.InsertCusto
     {
         private readonly ClinicDbContext _context;
         private readonly IEmailSender _emailSender;
+        private readonly ICustomerServiceRepository _repository;
 
-        public InsertCustomerHandler(ClinicDbContext context, IEmailSender emailSender)
+        public InsertCustomerHandler(ClinicDbContext context, IEmailSender emailSender, ICustomerServiceRepository repository)
         {
             _context = context;
             _emailSender = emailSender;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel<int>> Handle(InsertCustomerServiceCommand request, CancellationToken cancellationToken)
@@ -33,8 +36,7 @@ namespace ClinicManager.Application.Commands.CommandsCustomerService.InsertCusto
                     End = request.End
                 };
 
-                _context.CustomerServices.Add(customerService);
-                await _context.SaveChangesAsync(cancellationToken);
+                await _repository.AddAsync(customerService);
 
                 // Buscar o paciente pelo PatientId
                 var patient = _context.Patients.FirstOrDefault(p => p.Id == request.PatientId);

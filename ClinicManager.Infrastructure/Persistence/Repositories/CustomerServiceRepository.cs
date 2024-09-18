@@ -74,5 +74,10 @@ namespace ClinicManager.Infrastructure.Persistence.Repositories
             _context.CustomerServices.Update(customerService);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<int> CountAsync()
+        {
+            return await _context.CustomerServices.CountAsync();
+        }
     }
 }
