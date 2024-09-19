@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ClinicManager\\ClinicManager\\ClinicManager.API\\ClinicManager.Api.csproj": {}
+    "C:\\ClinicManager\\ClinicManager\\ClinicManager.Api\\ClinicManager.Api.csproj": {}
   },
   "projects": {
-    "C:\\ClinicManager\\ClinicManager\\ClinicManager.API\\ClinicManager.Api.csproj": {
+    "C:\\ClinicManager\\ClinicManager\\ClinicManager.Api\\ClinicManager.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ClinicManager\\ClinicManager\\ClinicManager.API\\ClinicManager.Api.csproj",
+        "projectUniqueName": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Api\\ClinicManager.Api.csproj",
         "projectName": "ClinicManager.Api",
-        "projectPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.API\\ClinicManager.Api.csproj",
+        "projectPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Api\\ClinicManager.Api.csproj",
         "packagesPath": "C:\\Users\\SAMSUNG\\.nuget\\packages\\",
-        "outputPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.API\\obj\\",
+        "outputPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

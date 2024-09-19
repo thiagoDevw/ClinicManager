@@ -1,17 +1,16 @@
 ﻿using ClinicManager.Application.Models;
-using ClinicManager.Infrastructure.Persistence;
+using ClinicManager.Core.Repositories;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace ClinicManager.Application.Commands.CommandsDoctors.UpdateDoctor
 {
     public class UpdateDoctorHandler : IRequestHandler<UpdateDoctorCommand, ResultViewModel<int>>
     {
-        private readonly ClinicDbContext _context;
+        private readonly IDoctorRepository _repository;
 
-        public UpdateDoctorHandler(ClinicDbContext context)
+        public UpdateDoctorHandler(IDoctorRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel<int>> Handle(UpdateDoctorCommand request, CancellationToken cancellationToken)
@@ -21,7 +20,7 @@ namespace ClinicManager.Application.Commands.CommandsDoctors.UpdateDoctor
                 return ResultViewModel<int>.Error("Os dados do médico são obrigatórios.");
             }
 
-            var doctor = await _context.Doctors.SingleOrDefaultAsync(d => d.Id == request.Id);
+            var doctor = await _repository.GetByIdAsync(request.Id);
 
             if (doctor == null)
             {
@@ -40,7 +39,7 @@ namespace ClinicManager.Application.Commands.CommandsDoctors.UpdateDoctor
             doctor.Specialty = request.Specialty;
             doctor.CRM = request.CRM;
 
-            await _context.SaveChangesAsync(cancellationToken);
+            await _repository.UpdateASync(doctor);
 
 
             return ResultViewModel<int>.Success(doctor.Id);
