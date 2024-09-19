@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XV4TyZ718RjYSGhXIvgDPUDb+lmGwvv0Ay6Vdonv7UfpExRJHu7kvb5WWa2JlHUx3W8nPmnwvJRo+llM/9aM0Q==",
+  "dgSpecHash": "gfNmGVsIlIwBKe9y/4W0Gwxupb7IwxNqFGGqWy1x0MP/uSKCTJe3bMVzMroNTO6YGmAsI7ydZ5Bq56GbFXop2w==",
   "success": true,
-  "projectFilePath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Api\\ClinicManager.Api.csproj",
+  "projectFilePath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.API\\ClinicManager.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SAMSUNG\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\SAMSUNG\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
