@@ -1,40 +1,28 @@
 ﻿using ClinicManager.Application.Models;
 using ClinicManager.Application.Models.DoctorModels;
-using ClinicManager.Infrastructure.Persistence;
+using ClinicManager.Core.Repositories;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace ClinicManager.Application.Queries.Doctors.GetAllDoctors
 {
     public class GetAllDoctorsHandler : IRequestHandler<GetAllDoctorsQuery, ResultViewModel<List<DoctorItemViewModel>>>
     {
-        private readonly ClinicDbContext _context;
+        private readonly IDoctorRepository _repository;
 
-        public GetAllDoctorsHandler(ClinicDbContext context)
+        public GetAllDoctorsHandler(IDoctorRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel<List<DoctorItemViewModel>>> Handle(GetAllDoctorsQuery request, CancellationToken cancellationToken)
         {
-            var doctorsQuery = _context.Doctors.AsQueryable();
+            var doctorsQuery = await _repository.GetAllAsync(request.Query);
 
-            if (!string.IsNullOrWhiteSpace(request.Query))
-            {
-                var query = request.Query.ToLower();
-                doctorsQuery = doctorsQuery.Where(d =>
-                d.Name.ToLower().Contains(query) ||
-                d.LastName.ToLower().Contains(query) ||
-                d.Email.ToLower().Contains(query) ||
-                d.CPF.ToLower().Contains(query) ||
-                    d.CRM.ToLower().Contains(query));
-            }
-
-            var doctors = await doctorsQuery
+            var doctorViewModels = doctorsQuery
                 .Select(d => DoctorItemViewModel.FromEntity(d))
-                .ToListAsync(cancellationToken);
+                .ToList();
 
-            return ResultViewModel<List<DoctorItemViewModel>>.Success(doctors);
+            return ResultViewModel<List<DoctorItemViewModel>>.Success(doctorViewModels);
         }
     }
 }

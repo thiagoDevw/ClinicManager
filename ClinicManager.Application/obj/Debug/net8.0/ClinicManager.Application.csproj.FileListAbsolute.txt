@@ -16,3 +16,21 @@ S:\Clinic Manager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\Clini
 S:\Clinic Manager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\refint\ClinicManager.Application.dll
 S:\Clinic Manager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\ClinicManager.Application.pdb
 S:\Clinic Manager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\ref\ClinicManager.Application.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Application\bin\Debug\net8.0\ClinicManager.Application.deps.json
+C:\ClinicManager\ClinicManager\ClinicManager.Application\bin\Debug\net8.0\ClinicManager.Application.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Application\bin\Debug\net8.0\ClinicManager.Application.pdb
+C:\ClinicManager\ClinicManager\ClinicManager.Application\bin\Debug\net8.0\ClinicManager.Core.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Application\bin\Debug\net8.0\ClinicManager.Infrastructure.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Application\bin\Debug\net8.0\ClinicManager.Core.pdb
+C:\ClinicManager\ClinicManager\ClinicManager.Application\bin\Debug\net8.0\ClinicManager.Infrastructure.pdb
+C:\ClinicManager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\ClinicManager.Application.csproj.AssemblyReference.cache
+C:\ClinicManager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\ClinicManager.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\ClinicManager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\ClinicManager.Application.AssemblyInfoInputs.cache
+C:\ClinicManager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\ClinicManager.Application.AssemblyInfo.cs
+C:\ClinicManager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\ClinicManager.Application.csproj.CoreCompileInputs.cache
+C:\ClinicManager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\ClinicManager.Application.sourcelink.json
+C:\ClinicManager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\ClinicMa.AED9E738.Up2Date
+C:\ClinicManager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\ClinicManager.Application.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\refint\ClinicManager.Application.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\ClinicManager.Application.pdb
+C:\ClinicManager\ClinicManager\ClinicManager.Application\obj\Debug\net8.0\ref\ClinicManager.Application.dll

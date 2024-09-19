@@ -11,3 +11,16 @@ S:\Clinic Manager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManage
 S:\Clinic Manager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\refint\ClinicManager.Core.dll
 S:\Clinic Manager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManager.Core.pdb
 S:\Clinic Manager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ref\ClinicManager.Core.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Core\bin\Debug\net8.0\ClinicManager.Core.deps.json
+C:\ClinicManager\ClinicManager\ClinicManager.Core\bin\Debug\net8.0\ClinicManager.Core.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Core\bin\Debug\net8.0\ClinicManager.Core.pdb
+C:\ClinicManager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManager.Core.csproj.AssemblyReference.cache
+C:\ClinicManager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\ClinicManager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManager.Core.AssemblyInfoInputs.cache
+C:\ClinicManager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManager.Core.AssemblyInfo.cs
+C:\ClinicManager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManager.Core.csproj.CoreCompileInputs.cache
+C:\ClinicManager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManager.Core.sourcelink.json
+C:\ClinicManager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManager.Core.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\refint\ClinicManager.Core.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ClinicManager.Core.pdb
+C:\ClinicManager\ClinicManager\ClinicManager.Core\obj\Debug\net8.0\ref\ClinicManager.Core.dll

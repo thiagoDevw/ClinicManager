@@ -30,6 +30,7 @@ namespace ClinicManager.Infrastructure
         private static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             services.AddScoped<ICustomerServiceRepository, CustomerServiceRepository> ();
+            services.AddScoped<IDoctorRepository, DoctorRepository>();
 
             return services;
         }

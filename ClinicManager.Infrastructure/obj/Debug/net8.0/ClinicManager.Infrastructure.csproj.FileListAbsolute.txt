@@ -16,3 +16,21 @@ S:\Clinic Manager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\re
 S:\Clinic Manager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ClinicManager.Infrastructure.pdb
 S:\Clinic Manager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ClinicManager.Infrastructure.genruntimeconfig.cache
 S:\Clinic Manager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ref\ClinicManager.Infrastructure.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\bin\Debug\net8.0\ClinicManager.Infrastructure.deps.json
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\bin\Debug\net8.0\ClinicManager.Infrastructure.runtimeconfig.json
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\bin\Debug\net8.0\ClinicManager.Infrastructure.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\bin\Debug\net8.0\ClinicManager.Infrastructure.pdb
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\bin\Debug\net8.0\ClinicManager.Core.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\bin\Debug\net8.0\ClinicManager.Core.pdb
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ClinicManager.Infrastructure.csproj.AssemblyReference.cache
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ClinicManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ClinicManager.Infrastructure.AssemblyInfoInputs.cache
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ClinicManager.Infrastructure.AssemblyInfo.cs
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ClinicManager.Infrastructure.csproj.CoreCompileInputs.cache
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ClinicManager.Infrastructure.sourcelink.json
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ClinicMa.05804AF0.Up2Date
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ClinicManager.Infrastructure.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\refint\ClinicManager.Infrastructure.dll
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ClinicManager.Infrastructure.pdb
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ClinicManager.Infrastructure.genruntimeconfig.cache
+C:\ClinicManager\ClinicManager\ClinicManager.Infrastructure\obj\Debug\net8.0\ref\ClinicManager.Infrastructure.dll

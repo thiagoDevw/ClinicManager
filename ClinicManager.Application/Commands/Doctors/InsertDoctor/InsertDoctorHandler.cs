@@ -1,5 +1,6 @@
 ﻿using ClinicManager.Application.Models;
 using ClinicManager.Core.Entities;
+using ClinicManager.Core.Repositories;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 
@@ -7,11 +8,11 @@ namespace ClinicManager.Application.Commands.CommandsDoctors.InsertDoctor
 {
     public class InsertDoctorHandler : IRequestHandler<InsertDoctorCommand, ResultViewModel<int>>
     {
-        private readonly ClinicDbContext _context;
+        private readonly IDoctorRepository _repository;
 
-        public InsertDoctorHandler(ClinicDbContext context)
+        public InsertDoctorHandler(IDoctorRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel<int>> Handle(InsertDoctorCommand request, CancellationToken cancellationToken)
@@ -30,8 +31,7 @@ namespace ClinicManager.Application.Commands.CommandsDoctors.InsertDoctor
                 CRM = request.CRM
             };
 
-            _context.Doctors.Add(doctor);
-            await _context.SaveChangesAsync(cancellationToken);
+            await _repository.AddAsync(doctor);
 
             return ResultViewModel<int>.Success(doctor.Id);
         }
