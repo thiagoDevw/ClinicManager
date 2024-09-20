@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "C:\\ClinicManager\\ClinicManager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A982B528-E6A6-4B86-8B57-916A6E4810B9}|ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.infrastructure\\persistence\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A982B528-E6A6-4B86-8B57-916A6E4810B9}|ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj|solutionrelative:clinicmanager.infrastructure\\persistence\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE4DDF8-1498-4B2A-BA1C-0B8D1021D9E0}|ClinicManager.Core\\ClinicManager.Core.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.core\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE4DDF8-1498-4B2A-BA1C-0B8D1021D9E0}|ClinicManager.Core\\ClinicManager.Core.csproj|solutionrelative:clinicmanager.core\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.application\\commands\\patients\\deletepatients\\deletepatienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\commands\\patients\\deletepatients\\deletepatienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.application\\commands\\patients\\updatepatients\\updatepatienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\commands\\patients\\updatepatients\\updatepatienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.application\\queries\\patients\\getbyidpatients\\getpatientsbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\queries\\patients\\getbyidpatients\\getpatientsbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.application\\commands\\patients\\insertpatients\\insertpatienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\commands\\patients\\insertpatients\\insertpatienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.application\\queries\\patients\\getallpatients\\getallpatientshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\queries\\patients\\getallpatients\\getallpatientshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45BB6B21-D8E2-4159-91D5-0CA55828A4B3}|ClinicManager.Api\\ClinicManager.Api.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.api\\controllers\\customerservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45BB6B21-D8E2-4159-91D5-0CA55828A4B3}|ClinicManager.Api\\ClinicManager.Api.csproj|solutionrelative:clinicmanager.api\\controllers\\customerservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.application\\commands\\doctors\\deletedoctor\\deletedoctorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\commands\\doctors\\deletedoctor\\deletedoctorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.application\\queries\\patients\\getbyidpatients\\getpatientbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\queries\\patients\\getbyidpatients\\getpatientbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A982B528-E6A6-4B86-8B57-916A6E4810B9}|ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.infrastructure\\persistence\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A982B528-E6A6-4B86-8B57-916A6E4810B9}|ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj|solutionrelative:clinicmanager.infrastructure\\persistence\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.application\\queries\\patients\\getallpatients\\getallpatientshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\queries\\patients\\getallpatients\\getallpatientshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.application\\queries\\doctors\\getbyiddoctor\\getdoctorbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,14 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A982B528-E6A6-4B86-8B57-916A6E4810B9}|ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.infrastructure\\persistence\\repositories\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A982B528-E6A6-4B86-8B57-916A6E4810B9}|ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj|solutionrelative:clinicmanager.infrastructure\\persistence\\repositories\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EE4DDF8-1498-4B2A-BA1C-0B8D1021D9E0}|ClinicManager.Core\\ClinicManager.Core.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.core\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE4DDF8-1498-4B2A-BA1C-0B8D1021D9E0}|ClinicManager.Core\\ClinicManager.Core.csproj|solutionrelative:clinicmanager.core\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.application\\commands\\doctors\\deletedoctor\\deletedoctorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\commands\\doctors\\deletedoctor\\deletedoctorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.application\\commands\\doctors\\insertdoctor\\insertdoctorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -89,10 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.application\\queries\\customerservice\\getallcustomerservice\\getallcustomerservicequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2FE1515-9DF8-415A-A6B4-536B90C91867}|ClinicManager.Application\\ClinicManager.Application.csproj|solutionrelative:clinicmanager.application\\queries\\customerservice\\getallcustomerservice\\getallcustomerservicequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45BB6B21-D8E2-4159-91D5-0CA55828A4B3}|ClinicManager.Api\\ClinicManager.Api.csproj|c:\\clinicmanager\\clinicmanager\\clinicmanager.api\\controllers\\customerservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45BB6B21-D8E2-4159-91D5-0CA55828A4B3}|ClinicManager.Api\\ClinicManager.Api.csproj|solutionrelative:clinicmanager.api\\controllers\\customerservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,37 +114,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IPatientRepository.cs",
+              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\Repositories\\IPatientRepository.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Core\\Repositories\\IPatientRepository.cs",
+              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\Repositories\\IPatientRepository.cs",
+              "RelativeToolTip": "ClinicManager.Core\\Repositories\\IPatientRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T19:55:51.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PatientRepository.cs",
+              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\Persistence\\Repositories\\PatientRepository.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Infrastructure\\Persistence\\Repositories\\PatientRepository.cs",
+              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\Persistence\\Repositories\\PatientRepository.cs",
+              "RelativeToolTip": "ClinicManager.Infrastructure\\Persistence\\Repositories\\PatientRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T19:59:43.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeletePatientHandler.cs",
+              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\Patients\\DeletePatients\\DeletePatientHandler.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\Patients\\DeletePatients\\DeletePatientHandler.cs",
+              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\Patients\\DeletePatients\\DeletePatientHandler.cs",
+              "RelativeToolTip": "ClinicManager.Application\\Commands\\Patients\\DeletePatients\\DeletePatientHandler.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T20:34:16.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdatePatientHandler.cs",
+              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\Patients\\UpdatePatients\\UpdatePatientHandler.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\Patients\\UpdatePatients\\UpdatePatientHandler.cs",
+              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\Patients\\UpdatePatients\\UpdatePatientHandler.cs",
+              "RelativeToolTip": "ClinicManager.Application\\Commands\\Patients\\UpdatePatients\\UpdatePatientHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T20:41:29.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetPatientsByIdQuery.cs",
+              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Queries\\Patients\\GetByIdPatients\\GetPatientsByIdQuery.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Application\\Queries\\Patients\\GetByIdPatients\\GetPatientsByIdQuery.cs",
+              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Queries\\Patients\\GetByIdPatients\\GetPatientsByIdQuery.cs",
+              "RelativeToolTip": "ClinicManager.Application\\Queries\\Patients\\GetByIdPatients\\GetPatientsByIdQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T20:44:10.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "InsertPatientHandler.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\Patients\\InsertPatients\\InsertPatientHandler.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\Patients\\InsertPatients\\InsertPatientHandler.cs",
               "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\Patients\\InsertPatients\\InsertPatientHandler.cs",
               "RelativeToolTip": "ClinicManager.Application\\Commands\\Patients\\InsertPatients\\InsertPatientHandler.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAwBwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T20:20:30.356Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetAllPatientsHandler.cs",
-              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Queries\\Patients\\GetAllPatients\\GetAllPatientsHandler.cs",
-              "RelativeDocumentMoniker": "ClinicManager.Application\\Queries\\Patients\\GetAllPatients\\GetAllPatientsHandler.cs",
-              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Queries\\Patients\\GetAllPatients\\GetAllPatientsHandler.cs",
-              "RelativeToolTip": "ClinicManager.Application\\Queries\\Patients\\GetAllPatients\\GetAllPatientsHandler.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAIAAAA",
+              "DocumentIndex": 6,
+              "Title": "CustomerServiceController.cs",
+              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Api\\Controllers\\CustomerServiceController.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Api\\Controllers\\CustomerServiceController.cs",
+              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Api\\Controllers\\CustomerServiceController.cs",
+              "RelativeToolTip": "ClinicManager.Api\\Controllers\\CustomerServiceController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGIAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T20:16:47.535Z",
+              "WhenOpened": "2024-09-18T21:08:23.527Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "DeleteDoctorHandler.cs",
+              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\Doctors\\DeleteDoctor\\DeleteDoctorHandler.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\Doctors\\DeleteDoctor\\DeleteDoctorHandler.cs",
+              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\Doctors\\DeleteDoctor\\DeleteDoctorHandler.cs",
+              "RelativeToolTip": "ClinicManager.Application\\Commands\\Doctors\\DeleteDoctor\\DeleteDoctorHandler.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T21:43:59.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GetPatientByIdHandler.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Queries\\Patients\\GetByIdPatients\\GetPatientByIdHandler.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Queries\\Patients\\GetByIdPatients\\GetPatientByIdHandler.cs",
@@ -145,20 +235,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PatientRepository.cs",
-              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\Persistence\\Repositories\\PatientRepository.cs",
-              "RelativeDocumentMoniker": "ClinicManager.Infrastructure\\Persistence\\Repositories\\PatientRepository.cs",
-              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\Persistence\\Repositories\\PatientRepository.cs",
-              "RelativeToolTip": "ClinicManager.Infrastructure\\Persistence\\Repositories\\PatientRepository.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAkwAoAAAA5AAAA",
+              "DocumentIndex": 9,
+              "Title": "GetAllPatientsHandler.cs",
+              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Queries\\Patients\\GetAllPatients\\GetAllPatientsHandler.cs",
+              "RelativeDocumentMoniker": "ClinicManager.Application\\Queries\\Patients\\GetAllPatients\\GetAllPatientsHandler.cs",
+              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Queries\\Patients\\GetAllPatients\\GetAllPatientsHandler.cs",
+              "RelativeToolTip": "ClinicManager.Application\\Queries\\Patients\\GetAllPatients\\GetAllPatientsHandler.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T19:59:43.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-20T20:16:47.535Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "InfrastructureModule.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\InfrastructureModule.cs",
               "RelativeDocumentMoniker": "ClinicManager.Infrastructure\\InfrastructureModule.cs",
@@ -166,12 +255,11 @@
               "RelativeToolTip": "ClinicManager.Infrastructure\\InfrastructureModule.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T19:56:37.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T19:56:37.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "GetDoctorByIdHandler.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Queries\\Doctors\\GetByIdDoctor\\GetDoctorByIdHandler.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Queries\\Doctors\\GetByIdDoctor\\GetDoctorByIdHandler.cs",
@@ -179,12 +267,11 @@
               "RelativeToolTip": "ClinicManager.Application\\Queries\\Doctors\\GetByIdDoctor\\GetDoctorByIdHandler.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T18:59:27.123Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T18:59:27.123Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "DoctorRepository.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\Persistence\\Repositories\\DoctorRepository.cs",
               "RelativeDocumentMoniker": "ClinicManager.Infrastructure\\Persistence\\Repositories\\DoctorRepository.cs",
@@ -192,25 +279,11 @@
               "RelativeToolTip": "ClinicManager.Infrastructure\\Persistence\\Repositories\\DoctorRepository.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAAkwAoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T18:37:53.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T18:37:53.238Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IPatientRepository.cs",
-              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\Repositories\\IPatientRepository.cs",
-              "RelativeDocumentMoniker": "ClinicManager.Core\\Repositories\\IPatientRepository.cs",
-              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\Repositories\\IPatientRepository.cs",
-              "RelativeToolTip": "ClinicManager.Core\\Repositories\\IPatientRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T19:55:51.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "InsertDoctorHandler.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\Doctors\\InsertDoctor\\InsertDoctorHandler.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\Doctors\\InsertDoctor\\InsertDoctorHandler.cs",
@@ -218,25 +291,11 @@
               "RelativeToolTip": "ClinicManager.Application\\Commands\\Doctors\\InsertDoctor\\InsertDoctorHandler.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T19:09:08.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T19:09:08.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DeleteDoctorHandler.cs",
-              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\Doctors\\DeleteDoctor\\DeleteDoctorHandler.cs",
-              "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\Doctors\\DeleteDoctor\\DeleteDoctorHandler.cs",
-              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\Doctors\\DeleteDoctor\\DeleteDoctorHandler.cs",
-              "RelativeToolTip": "ClinicManager.Application\\Commands\\Doctors\\DeleteDoctor\\DeleteDoctorHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T21:43:59.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "UpdateDoctorHandler.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\Doctors\\UpdateDoctor\\UpdateDoctorHandler.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\Doctors\\UpdateDoctor\\UpdateDoctorHandler.cs",
@@ -244,12 +303,11 @@
               "RelativeToolTip": "ClinicManager.Application\\Commands\\Doctors\\UpdateDoctor\\UpdateDoctorHandler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T21:39:57.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T21:39:57.167Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "IDoctorRepository.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\Repositories\\IDoctorRepository.cs",
               "RelativeDocumentMoniker": "ClinicManager.Core\\Repositories\\IDoctorRepository.cs",
@@ -261,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "DeleteCustomerHandler.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\CustomerService\\DeleteCustomerService\\DeleteCustomerHandler.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CustomerService\\DeleteCustomerService\\DeleteCustomerHandler.cs",
@@ -273,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "UpdateCustomerHandler.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\CustomerService\\UpdateCustomerService\\UpdateCustomerHandler.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CustomerService\\UpdateCustomerService\\UpdateCustomerHandler.cs",
@@ -285,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "InsertCustomerHandler.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Commands\\CustomerService\\InsertCustomerService\\InsertCustomerHandler.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Commands\\CustomerService\\InsertCustomerService\\InsertCustomerHandler.cs",
@@ -297,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Api\\Program.cs",
               "RelativeDocumentMoniker": "ClinicManager.Api\\Program.cs",
@@ -309,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Api\\appsettings.json",
               "RelativeDocumentMoniker": "ClinicManager.Api\\appsettings.json",
@@ -321,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "GetCustomerServiceByIdHandler.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Queries\\CustomerService\\GetByIdCustomerService\\GetCustomerServiceByIdHandler.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Queries\\CustomerService\\GetByIdCustomerService\\GetCustomerServiceByIdHandler.cs",
@@ -333,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "GetAllDoctorsHandler.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Queries\\Doctors\\GetAllDoctors\\GetAllDoctorsHandler.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Queries\\Doctors\\GetAllDoctors\\GetAllDoctorsHandler.cs",
@@ -345,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "CustomerServiceRepository.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\Persistence\\Repositories\\CustomerServiceRepository.cs",
               "RelativeDocumentMoniker": "ClinicManager.Infrastructure\\Persistence\\Repositories\\CustomerServiceRepository.cs",
@@ -357,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "GetAllCustomerServiceHandler.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Queries\\CustomerService\\GetAllCustomerService\\GetAllCustomerServiceHandler.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Queries\\CustomerService\\GetAllCustomerService\\GetAllCustomerServiceHandler.cs",
@@ -369,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "GetAllCustomerServiceQuery.cs",
               "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\Queries\\CustomerService\\GetAllCustomerService\\GetAllCustomerServiceQuery.cs",
               "RelativeDocumentMoniker": "ClinicManager.Application\\Queries\\CustomerService\\GetAllCustomerService\\GetAllCustomerServiceQuery.cs",
@@ -378,18 +436,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T21:06:30.878Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CustomerServiceController.cs",
-              "DocumentMoniker": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Api\\Controllers\\CustomerServiceController.cs",
-              "RelativeDocumentMoniker": "ClinicManager.Api\\Controllers\\CustomerServiceController.cs",
-              "ToolTip": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Api\\Controllers\\CustomerServiceController.cs",
-              "RelativeToolTip": "ClinicManager.Api\\Controllers\\CustomerServiceController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAIBJwGIAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T21:08:23.527Z"
             }
           ]
         }

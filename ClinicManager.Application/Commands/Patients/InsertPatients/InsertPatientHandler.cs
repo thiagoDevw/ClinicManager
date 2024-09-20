@@ -1,18 +1,17 @@
 ﻿using ClinicManager.Application.Models;
 using ClinicManager.Core.Entities;
-using ClinicManager.Infrastructure.Persistence;
+using ClinicManager.Core.Repositories;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace ClinicManager.Application.Commands.CommandsPatients.InsertPatients
 {
     public class InsertPatientHandler : IRequestHandler<InsertPatientCommand, ResultViewModel<int>>
     {
-        private readonly ClinicDbContext _context;
+        private readonly IPatientRepository _repository;
 
-        public InsertPatientHandler (ClinicDbContext context)
+        public InsertPatientHandler(IPatientRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel<int>> Handle(InsertPatientCommand request, CancellationToken cancellationToken)
@@ -22,7 +21,7 @@ namespace ClinicManager.Application.Commands.CommandsPatients.InsertPatients
                 return ResultViewModel<int>.Error("Os dados do paciente são obrigatórios.");
             }
 
-            if (await _context.Patients.AnyAsync(p => p.CPF == request.CPF, cancellationToken))
+            if (await _repository.PatientExistsAsync(request.CPF))
             {
                 return ResultViewModel<int>.Error("Paciente com este CPF já existe.");
             }
@@ -41,8 +40,7 @@ namespace ClinicManager.Application.Commands.CommandsPatients.InsertPatients
                 Address = request.Address
             };
 
-            _context.Patients.Add(patientInsert);
-            await _context.SaveChangesAsync(cancellationToken);
+            _repository.AddAsync(patientInsert);
 
             return ResultViewModel<int>.Success(patientInsert.Id);
         }

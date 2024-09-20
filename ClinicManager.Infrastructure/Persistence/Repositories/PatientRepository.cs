@@ -13,22 +13,21 @@ namespace ClinicManager.Infrastructure.Persistence.Repositories
             _context = context;
         }
 
+        public async Task<bool> PatientExistsAsync(string cpf)
+        {
+            return await _context.Patients.AnyAsync(p => p.CPF == cpf);
+        }
+
         public async Task AddAsync(Patient patient)
         {
             _context.Patients.Add(patient);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(Patient patient)
         {
-            var patient = await _context.Patients.FindAsync(id);
-
-            if (patient == null)
-            {
-                _context.Patients.Remove(patient);
-                await _context.SaveChangesAsync();
-            }
-
+            _context.Patients.Remove(patient);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<List<Patient>> GetAllAsync(string query = null)

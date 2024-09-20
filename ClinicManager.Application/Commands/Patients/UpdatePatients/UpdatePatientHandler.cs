@@ -1,5 +1,6 @@
 ﻿using Azure.Core;
 using ClinicManager.Application.Models;
+using ClinicManager.Core.Repositories;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 
@@ -7,11 +8,11 @@ namespace ClinicManager.Application.Commands.CommandsPatients.UpdatePatients
 {
     public class UpdatePatientHandler : IRequestHandler<UpdatePatientCommand, ResultViewModel>
     {
-        private readonly ClinicDbContext _context;
+        private readonly IPatientRepository _repository;
 
-        public UpdatePatientHandler(ClinicDbContext context)
+        public UpdatePatientHandler(IPatientRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel> Handle(UpdatePatientCommand request, CancellationToken cancellationToken)
@@ -21,7 +22,7 @@ namespace ClinicManager.Application.Commands.CommandsPatients.UpdatePatients
                 return ResultViewModel<int>.Error("Dados do paciente não fornecidos.");
             }
 
-            var existingPatient = await _context.Patients.FindAsync(request.Id);
+            var existingPatient = await _repository.GetByIdAsync(request.Id);
 
             if (existingPatient == null)
             {
@@ -39,8 +40,7 @@ namespace ClinicManager.Application.Commands.CommandsPatients.UpdatePatients
             existingPatient.Weight = request.Weight;
             existingPatient.Address = request.Address;
 
-            _context.Patients.Update(existingPatient);
-            await _context.SaveChangesAsync(cancellationToken);
+            await _repository.UpdateAsync(existingPatient);
 
             return ResultViewModel.Success();
         }
