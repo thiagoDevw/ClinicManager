@@ -20,8 +20,6 @@ namespace ClinicManager.Application.Queries.Patients.GetAllPatients
         {
             var patients = await _repository.GetAllAsync(request.Query);
 
-
-
             var result = patients.Select(p => PatientItemViewModel.FromEntity(p)).ToList();
 
             return ResultViewModel<List<PatientItemViewModel>>.Success(result);

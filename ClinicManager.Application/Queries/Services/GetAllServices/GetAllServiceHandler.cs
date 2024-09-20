@@ -1,31 +1,26 @@
 ﻿using ClinicManager.Application.Models;
 using ClinicManager.Application.Models.ServiceModels;
-using ClinicManager.Infrastructure.Persistence;
+using ClinicManager.Core.Repositories;
 using MediatR;
 
 namespace ClinicManager.Application.Queries.Services.GetAllServices
 {
     public class GetAllServiceHandler : IRequestHandler<GetAllServicesQuery, ResultViewModel<List<ServiceItemViewModel>>>
     {
-        private readonly ClinicDbContext _context;
+        private readonly IServiceRepository _repository;
 
-        public GetAllServiceHandler(ClinicDbContext context)
+        public GetAllServiceHandler(IServiceRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel<List<ServiceItemViewModel>>> Handle(GetAllServicesQuery request, CancellationToken cancellationToken)
         {
-            var query = request.Query?.ToLower();
+            var services = await _repository.GetAllAsync(request.Query);
 
-            var services = _context.Services
-                .Where(s => string.IsNullOrEmpty(query) ||
-                s.Name.ToLower().Contains(query) ||
-                   s.Description.ToLower().Contains(query))
-                .Select(s => ServiceItemViewModel.FromEntity(s))
-                .ToList();
+            var serviceViewModels = services.Select(s => ServiceItemViewModel.FromEntity(s)).ToList();
 
-            return ResultViewModel<List<ServiceItemViewModel>>.Success(services);
+            return ResultViewModel<List<ServiceItemViewModel>>.Success(serviceViewModels);
         }
     }
 }

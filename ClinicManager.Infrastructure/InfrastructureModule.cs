@@ -32,6 +32,7 @@ namespace ClinicManager.Infrastructure
             services.AddScoped<ICustomerServiceRepository, CustomerServiceRepository> ();
             services.AddScoped<IDoctorRepository, DoctorRepository>();
             services.AddScoped<IPatientRepository, PatientRepository>();
+            services.AddScoped<IServiceRepository, ServiceRepository>();
 
             return services;
         }
