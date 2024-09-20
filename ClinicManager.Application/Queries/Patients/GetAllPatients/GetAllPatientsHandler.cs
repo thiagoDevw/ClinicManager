@@ -1,5 +1,6 @@
 ﻿using ClinicManager.Application.Models;
 using ClinicManager.Application.Models.PatientsModels;
+using ClinicManager.Core.Repositories;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -8,30 +9,20 @@ namespace ClinicManager.Application.Queries.Patients.GetAllPatients
 {
     public class GetAllPatientsHandler : IRequestHandler<GetAllPatientsQuery, ResultViewModel<List<PatientItemViewModel>>>
     {
-        private readonly ClinicDbContext _context;
+        private readonly IPatientRepository _repository;
 
-        public GetAllPatientsHandler(ClinicDbContext context)
+        public GetAllPatientsHandler(IPatientRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel<List<PatientItemViewModel>>> Handle(GetAllPatientsQuery request, CancellationToken cancellationToken)
         {
-            var patients = _context.Patients.AsQueryable();
+            var patients = await _repository.GetAllAsync(request.Query);
 
-            if (!string.IsNullOrWhiteSpace(request.Query))
-            {
-                var query = request.Query.ToLower();
-                patients = patients.Where(p =>
-                p.Name.ToLower().Contains(query) ||
-                p.LastName.ToLower().Contains(query) ||
-                p.Email.ToLower().Contains(query) ||
-                    p.CPF.ToLower().Contains(query));
-            }
 
-            var result = await patients
-                .Select(p => PatientItemViewModel.FromEntity(p))
-                .ToListAsync(cancellationToken);
+
+            var result = patients.Select(p => PatientItemViewModel.FromEntity(p)).ToList();
 
             return ResultViewModel<List<PatientItemViewModel>>.Success(result);
         }
