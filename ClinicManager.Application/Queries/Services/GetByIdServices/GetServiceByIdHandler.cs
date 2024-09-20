@@ -1,5 +1,6 @@
 ﻿using ClinicManager.Api.Models.ServiceModels;
 using ClinicManager.Application.Models;
+using ClinicManager.Core.Repositories;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -8,17 +9,16 @@ namespace ClinicManager.Application.Queries.Services.GetByIdServices
 {
     public class GetServiceByIdHandler : IRequestHandler<GetServiceByIdQuery, ResultViewModel<ServiceViewModel>>
     {
-        private readonly ClinicDbContext _context;
+        private readonly IServiceRepository _repository;
 
-        public GetServiceByIdHandler(ClinicDbContext context)
+        public GetServiceByIdHandler(IServiceRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel<ServiceViewModel>> Handle(GetServiceByIdQuery request, CancellationToken cancellationToken)
         {
-            var service = await _context.Services
-               .FirstOrDefaultAsync(s => s.Id == request.Id);
+            var service = await _repository.GetByIdAsync(request.Id);
 
             if (service == null)
             {

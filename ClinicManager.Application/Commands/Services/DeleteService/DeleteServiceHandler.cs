@@ -1,4 +1,5 @@
 ﻿using ClinicManager.Application.Models;
+using ClinicManager.Core.Repositories;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 
@@ -6,24 +7,23 @@ namespace ClinicManager.Application.Commands.CommandsServices.DeleteService
 {
     public class DeleteServiceHandler : IRequestHandler<DeleteServiceCommand, ResultViewModel<int>>
     {
-        private readonly ClinicDbContext _context;
+        private readonly IServiceRepository _repository;
 
-        public DeleteServiceHandler(ClinicDbContext context)
+        public DeleteServiceHandler(IServiceRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel<int>> Handle(DeleteServiceCommand request, CancellationToken cancellationToken)
         {
-            var service = await _context.Services.FindAsync(request.Id);
+            var service = await _repository.GetByIdAsync(request.Id);
 
             if (service == null)
             {
                 return ResultViewModel<int>.Error("Serviço não encontrado.");
             }
 
-            _context.Services.Remove(service);
-            await _context.SaveChangesAsync();
+            await _repository.DeleteAsync(service);
 
             return ResultViewModel<int>.Success(service.Id);
         }

@@ -1,5 +1,6 @@
 ﻿using Azure.Core;
 using ClinicManager.Application.Models;
+using ClinicManager.Core.Repositories;
 using ClinicManager.Infrastructure.Persistence;
 using MediatR;
 
@@ -7,11 +8,11 @@ namespace ClinicManager.Application.Commands.CommandsServices.UpdateService
 {
     public class UpdateServiceHandler : IRequestHandler<UpdateServiceCommand, ResultViewModel>
     {
-        private readonly ClinicDbContext _context;
+        private readonly IServiceRepository _repository;
 
-        public UpdateServiceHandler(ClinicDbContext context)
+        public UpdateServiceHandler(IServiceRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel> Handle(UpdateServiceCommand request, CancellationToken cancellationToken)
@@ -26,7 +27,7 @@ namespace ClinicManager.Application.Commands.CommandsServices.UpdateService
                 return ResultViewModel.Error("Id do serviço não corresponde ao ID fornecido no modelo.");
             }
 
-            var existingService = await _context.Services.FindAsync(new object[] { request.Id }, cancellationToken);
+            var existingService = await _repository.GetByIdAsync(request.Id);
             if (existingService == null)
             {
                 return ResultViewModel.Error($"Serviço com ID {request.Id} não encontrado.");
@@ -37,9 +38,7 @@ namespace ClinicManager.Application.Commands.CommandsServices.UpdateService
             existingService.Value = request.Value;
             existingService.Duration = request.Duration;
 
-            _context.Services.Update(existingService);
-            await _context.SaveChangesAsync();
-
+            await _repository.UpdateAsync(existingService);
 
             return ResultViewModel.Success();
         }

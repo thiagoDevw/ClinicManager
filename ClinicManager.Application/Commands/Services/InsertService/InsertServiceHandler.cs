@@ -1,19 +1,18 @@
 ﻿using ClinicManager.Application.Models;
 using ClinicManager.Core.Entities;
-using ClinicManager.Infrastructure.Persistence;
+using ClinicManager.Core.Repositories;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace ClinicManager.Application.Commands.CommandsServices.InsertService
 {
     public class InsertServiceHandler : IRequestHandler<InsertServiceCommand, ResultViewModel<int>>
     {
-        private readonly ClinicDbContext _context;
+        private readonly IServiceRepository _repository;
 
-        public InsertServiceHandler(ClinicDbContext context)
+        public InsertServiceHandler(IServiceRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         public async Task<ResultViewModel<int>> Handle(InsertServiceCommand request, CancellationToken cancellationToken)
@@ -31,7 +30,7 @@ namespace ClinicManager.Application.Commands.CommandsServices.InsertService
                 return ResultViewModel<int>.Error(errorMessage);
             }
 
-            if (await _context.Services.AnyAsync(s => s.Name == request.Name, cancellationToken))
+            if (await _repository.ExistsByNameAsync(request.Name, cancellationToken))
             {
                 return ResultViewModel<int>.Error("Já existe um serviço com este nome.");
             }
@@ -44,8 +43,7 @@ namespace ClinicManager.Application.Commands.CommandsServices.InsertService
                 Duration = request.Duration
             };
 
-            _context.Services.Add(service);
-            await _context.SaveChangesAsync();
+            await _repository.AddAsync(service);
 
             return ResultViewModel<int>.Success(service.Id);
         }

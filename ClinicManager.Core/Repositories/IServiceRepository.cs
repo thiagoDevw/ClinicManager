@@ -6,8 +6,9 @@ namespace ClinicManager.Core.Repositories
     {
         Task<List<Service>> GetAllAsync(string query = null);
         Task<Service> GetByIdAsync(int id);
+        Task<bool> ExistsByNameAsync(string name, CancellationToken cancellationToken);
         Task AddAsync(Service service);
         Task UpdateAsync(Service service);
-        Task DeleteAsync(int id);
+        Task DeleteAsync(Service service);
     }
 }
