@@ -1,9 +1,7 @@
 ﻿using ClinicManager.Api.Models.ServiceModels;
 using ClinicManager.Application.Models;
 using ClinicManager.Core.Repositories;
-using ClinicManager.Infrastructure.Persistence;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace ClinicManager.Application.Queries.Services.GetByIdServices
 {

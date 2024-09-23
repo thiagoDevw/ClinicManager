@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\ClinicManager.Application.csproj": {}
+    "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\ClinicManager.Application.csproj": {}
   },
   "projects": {
-    "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\ClinicManager.Application.csproj": {
+    "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\ClinicManager.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\ClinicManager.Application.csproj",
+        "projectUniqueName": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\ClinicManager.Application.csproj",
         "projectName": "ClinicManager.Application",
-        "projectPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\ClinicManager.Application.csproj",
-        "packagesPath": "C:\\Users\\SAMSUNG\\.nuget\\packages\\",
-        "outputPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Application\\obj\\",
+        "projectPath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\ClinicManager.Application.csproj",
+        "packagesPath": "C:\\Users\\ta741\\.nuget\\packages\\",
+        "outputPath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SAMSUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ta741\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj": {
-                "projectPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj"
+              "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj": {
+                "projectPath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj"
               },
-              "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj": {
-                "projectPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj"
+              "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj": {
+                "projectPath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj"
               }
             }
           }
@@ -106,24 +106,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj": {
+    "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj",
+        "projectUniqueName": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj",
         "projectName": "ClinicManager.Core",
-        "projectPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj",
-        "packagesPath": "C:\\Users\\SAMSUNG\\.nuget\\packages\\",
-        "outputPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\obj\\",
+        "projectPath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj",
+        "packagesPath": "C:\\Users\\ta741\\.nuget\\packages\\",
+        "outputPath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SAMSUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ta741\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -185,24 +185,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj": {
+    "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj",
+        "projectUniqueName": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj",
         "projectName": "ClinicManager.Infrastructure",
-        "projectPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\SAMSUNG\\.nuget\\packages\\",
-        "outputPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Infrastructure\\obj\\",
+        "projectPath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Infrastructure\\ClinicManager.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ta741\\.nuget\\packages\\",
+        "outputPath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SAMSUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ta741\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -218,8 +218,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj": {
-                "projectPath": "C:\\ClinicManager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj"
+              "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj": {
+                "projectPath": "S:\\Clinic Manager\\ClinicManager\\ClinicManager.Core\\ClinicManager.Core.csproj"
               }
             }
           }
@@ -296,7 +296,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
