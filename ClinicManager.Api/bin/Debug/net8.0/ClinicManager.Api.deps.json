@@ -1198,12 +1198,6 @@
       "System.Text.Json/8.0.4": {
         "dependencies": {
           "System.Text.Encodings.Web": "8.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/System.Text.Json.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.724.31311"
-          }
         }
       },
       "System.Threading.Channels/6.0.0": {},
@@ -1222,7 +1216,10 @@
           "SendGrid": "9.29.3"
         },
         "runtime": {
-          "ClinicManager.Application.dll": {}
+          "ClinicManager.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "ClinicManager.Core/1.0.0": {
@@ -1232,7 +1229,10 @@
           "SendGrid": "9.29.3"
         },
         "runtime": {
-          "ClinicManager.Core.dll": {}
+          "ClinicManager.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "ClinicManager.Infrastructure/1.0.0": {
@@ -1247,7 +1247,10 @@
           "SendGrid": "9.29.3"
         },
         "runtime": {
-          "ClinicManager.Infrastructure.dll": {}
+          "ClinicManager.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -871,7 +871,10 @@
           "SendGrid": "9.29.3"
         },
         "runtime": {
-          "ClinicManager.Core.dll": {}
+          "ClinicManager.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "ClinicManager.Infrastructure/1.0.0": {
@@ -886,7 +889,10 @@
           "SendGrid": "9.29.3"
         },
         "runtime": {
-          "ClinicManager.Infrastructure.dll": {}
+          "ClinicManager.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
